@@ -29,6 +29,7 @@
 
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
+        <!--Don't need-->
         <tr>
             <td class="auto-style2">* Patient ID:</td>
             <td>
@@ -111,8 +112,8 @@
                 <asp:TextBox ID="txtZIP" style="width:90%;" runat="server"></asp:TextBox>
                 <br />
             </td>
-            
         </tr>
+        <!--Add in stuff for social secuirty number-->
         <tr>
             <td class="auto-style2">Home Phone:</td>
             <td>
@@ -134,6 +135,7 @@
                 <br />
             </td>
         </tr>
+        <!--Don't need-->
         <tr>
             <td class="auto-style2">Email:</td>
             <td>
@@ -141,6 +143,7 @@
                 <br />
             </td>
         </tr>
+        <!--Dont need-->
         <tr>
             <td class="auto-style2">Email:</td>
             <td>

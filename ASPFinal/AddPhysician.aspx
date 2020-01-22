@@ -28,6 +28,7 @@
 
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
+        <!--Don't Need-->
         <tr>
             <td class="auto-style2">*Physician ID:</td>
             <td>
@@ -125,6 +126,7 @@
                 <asp:TextBox ID="txtEmailI" style="width:90%;" runat="server"></asp:TextBox>
             </td>
         </tr>
+        <!--Don't need-->
         <tr>
             <td class="auto-style2">Email:</td>
             <td>
