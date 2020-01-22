@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutPage.aspx" />
     <Content Include="AddPatient.aspx" />
     <Content Include="AddPhysician.aspx" />
     <Content Include="AddPrescription.aspx" />
@@ -94,6 +95,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.aspx.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutPage.aspx.designer.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddPatient.aspx.cs">
       <DependentUpon>AddPatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

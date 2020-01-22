@@ -12,6 +12,7 @@
             <a href="Home.html">Logout</a>
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
+        <!--Don't Need-->
         <tr>
             <td class="auto-style2">*Prescription ID:</td>
             <td>
