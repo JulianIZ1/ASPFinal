@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="SearchPatient.aspx.cs" Inherits="ASPFinal.SearchPatient" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="ContentPlaceHolder1" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <script type="text/javascript"> 
 function SelectAll(id)
@@ -45,7 +45,11 @@ function SelectAll(id)
         </div>
     
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <ajaxToolkit:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server"></ajaxToolkit:AutoCompleteExtender>
+    <ajaxToolkit:AutoCompleteExtender ID="aceFname" runat="server" ServiceMethod="GetCompletionFname" TargetControlID="txtFname" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
+    <ajaxToolkit:AutoCompleteExtender ID="aceLname" runat="server" ServiceMethod="GetCompletionLname" TargetControlID="txtLname" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
+    <ajaxToolkit:AutoCompleteExtender ID="aceMidInit" runat="server" ServiceMethod="GetCompletionMidInit" TargetControlID="txtMidInit" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
+    <ajaxToolkit:AutoCompleteExtender ID="acePatientID" runat="server" ServiceMethod="GetCompletionPatientID" TargetControlID="txtPatientID" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
+
 
     <table class="auto-style1">
         <tr><td class="searchPara"><asp:Label ID="lblPatientID" runat="server" Text="Patient ID:"></asp:Label><asp:TextBox ID="txtPatientID" runat="server"></asp:TextBox>
