@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="titleDiv">
-            XYZ Health | Dashboard
+            Umbrella Health | Dashboard
         </div>        
         <div class="customerInfoDiv roundBorders">
             <div class="infoHeader">
