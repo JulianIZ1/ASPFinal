@@ -24,13 +24,40 @@ namespace ASPFinal
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// AutoCompleteExtender1 control.
+        /// aceFname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender AutoCompleteExtender1;
+        protected global::AjaxControlToolkit.AutoCompleteExtender aceFname;
+
+        /// <summary>
+        /// aceLname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AutoCompleteExtender aceLname;
+
+        /// <summary>
+        /// aceMidInit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AutoCompleteExtender aceMidInit;
+
+        /// <summary>
+        /// acePatientID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AutoCompleteExtender acePatientID;
 
         /// <summary>
         /// lblPatientID control.
