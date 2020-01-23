@@ -16,7 +16,7 @@
             return isValid;
         }
     </script>
-    <link href="main.css" rel="stylesheet" />
+   
     <link href="StyleSheet.css" rel="stylesheet" />
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true"></asp:ScriptManager>
             <div class="navbar verticalCenter" align="right" style="background-color:black">
@@ -34,13 +34,18 @@
 			    About Us<br />
                 <div class="missionStatement">
                     We strive to build a future in medicine that encourages friendliness, low costs, <br />excellent service, and customer satisfaction.
-                    <br /><br /><br />
-
+                    <br />___________________________________________________________________________________<br /><br />
+                    For the past 45 years, we at Umbrella Corp. have been dedicated to bringing the people <br />
+                    of our community the highest quality and friendliest health care around. We are glad to help our community <br />
+                    no matter what their financial status is, we will offer discounts depending on the household income  <br />
+                    because we are passionate about the health of our community and doing everything we can to keep them healthy.  <br />
+                    ___________________________________________
                 </div> 
-		    </div>	                   
-	    </div>  
-        <div class="footer">&copy XYZ Corp. | (111)123-4567 | ABC Morea, Mega, PA | XYZCorp@Zipps.com</div>
-    </div>      
+
+ </div>	                   
+	    
+         <div class="footer">&copy  Umbrella Corp. | (111)123-4567 | ABC Morea, Mega, PA | XYZCorp@Zipps.com</div>
+        
     
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
