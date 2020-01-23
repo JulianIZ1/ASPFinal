@@ -16,7 +16,7 @@
             return isValid;
         }
     </script>
-        <div class="navbar verticalCenter" align="right">
+        <div class="navbar verticalCenter" align="right" style="background-color:black">
             <img src="Images/logo2.png" class="logo"/>
             <a href="Dashboard.aspx">Dashboard</a>
             <a href="" class="active">Prescriptions</a>

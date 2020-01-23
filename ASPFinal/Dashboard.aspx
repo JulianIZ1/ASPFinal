@@ -2,7 +2,7 @@
 <asp:Content ID="ContentPlaceHolder1" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <link href="main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="DashboardCSS.css" />
-    <div class="navbar verticalCenter" align="right">
+    <div class="navbar verticalCenter" align="right" style="background-color:black">
             <img src="Images/logo2.png" class="logo"/>
             <a href="" class="active">Dashboard</a>
             <a href="ViewPrescriptions.aspx">Prescriptions</a>
@@ -17,7 +17,7 @@
                 <iframe src="http://free.timeanddate.com/clock/i6lx9lsv/n4561/fn6/fs16/fcfff/tct/pct/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="100%" height="100%" allowTransparency="true"></iframe>
             </div>
             <asp:Label ID="lblWelcome" runat="server" Text="Welcome" CssClass="welcomeMsg"></asp:Label>
-            <div id="cont_4218ecce3bb6b06f69973c0f8000b7e5" class="weatherDiv">
+            <div id="cont_4218ecce3bb6b06f69973c0f8000b7e5" class="auto-style2">
                 <script type="text/javascript" async src="https://www.theweather.com/wid_loader/4218ecce3bb6b06f69973c0f8000b7e5"></script>
             </div>
         </div>
@@ -37,15 +37,7 @@
         </table>
         </div>
         <div class="contactDiv roundBorders">
-            <a id="foxyform_embed_link_942456" href=""></a>
-            <script type="text/javascript">
-                (function(d, t){
-                    var g = d.createElement(t),
-                    s = d.getElementsByTagName(t)[0];
-                    g.src = "http://www.foxyform.com/js.php?id=942456&sec_hash=864e9a6dc65&width=350px";
-                    s.parentNode.insertBefore(g, s);
-                }(document, "script"));
-            </script>
+         <iframe src="https://home.modernhealthcare.com/" style="border-width:0" width="100%" height="100%" margin-top:"7%" frameborder="0" scrolling="yes"></iframe>
         </div>
         <div class="calendarDiv roundBorders">
             <iframe src="https://calendar.google.com/calendar/embed?src=halsaisfmi43pt7kv8jnm57tb0%40group.calendar.google.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="100%" margin-top:"7%" frameborder="0" scrolling="yes"></iframe>
@@ -74,11 +66,54 @@
             </tr>
         </table>
         </div>
-        <div class="callDiv roundBorders">
+        <table class="callDiv roundBorders">
+            <tr>
+                <th>
+                        <div class="auto-style1">
+                            Office Hours:
+                                </div>
 
-        </div>
+                         <p><font size="4">Monday - 9:00 Am to 9:00 Pm</font></p>
+                                                    <br />
+                         <p><font size="4">Tuesday - 9:00 Am to 9:00 Pm</font></p>
+                                                    <br />
+                         <p><font size="4">Wednesday - 9:00 Am to 9:00 Pm</font></p>
+                                                    <br />
+                         <p><font size="4">Thursday - 9:00 Am to 9:00 Pm</font></p>
+                                                    <br />
+                         <p><font size="4">Friday - 9:00 Am to 6:30 Pm</font></p>
+                </th>
+            </tr>
+        </table>
     </div>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 15%;
+            position: absolute;
+            left: 1px;
+            top: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            vertical-align: middle;
+            font-size: 25px;
+            color: white;
+            text-align: left;
+            font-family: 'Modern No. 20';
+            border-bottom: 1px solid #939393;
+        }
+        .auto-style2 {
+            width: 67%;
+            height: 110%;
+            color: white;
+            position: absolute;
+            right: 0%;
+            top: -15%;
+            border-left: 2px solid red;
+        }
+    </style>
 </asp:Content>
 

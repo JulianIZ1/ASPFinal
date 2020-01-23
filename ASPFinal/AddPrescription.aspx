@@ -3,7 +3,7 @@
     
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
-    <div class="navbar verticalCenter" align="right">
+    <div class="navbar verticalCenter" align="right" style="background-color:black">
             <img src="Images/logo2.png" class="logo"/>
             <a href="Dashboard.aspx">Dashboard</a>
             <a href="ViewPrescriptions.aspx">Prescriptions</a>
