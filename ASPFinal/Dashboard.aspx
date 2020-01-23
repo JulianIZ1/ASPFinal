@@ -31,18 +31,7 @@
             <table class="customerInfoTable">
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">
-                        <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
-                        <Columns>
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField HeaderText="GENDER" DataField="Gender" SortExpression="GENDER" />                                                         
-                        </Columns>   
-                        <EmptyDataTemplate>
-                            No Records Found Matching Your Search!
-                        </EmptyDataTemplate>
-                    </asp:GridView>                
+                                    
                 </td>
             </tr>
         </table>
@@ -59,7 +48,7 @@
             </script>
         </div>
         <div class="calendarDiv roundBorders">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=pmh6tsa8snfv8mc2783nuvml10%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="100%" margin-top:"7%" frameborder="0" scrolling="yes"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?src=halsaisfmi43pt7kv8jnm57tb0%40group.calendar.google.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="100%" margin-top:"7%" frameborder="0" scrolling="yes"></iframe>
         </div>
         <div class="presInfoDiv roundBorders">
             <div class="infoHeader">

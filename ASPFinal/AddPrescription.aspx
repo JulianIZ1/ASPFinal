@@ -12,15 +12,7 @@
             <a href="Home.html">Logout</a>
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
-        <!--Don't Need-->
-        <tr>
-            <td class="auto-style2">*Prescription ID:</td>
-            <td>
-                <asp:TextBox ID="txtPrescriptionID" style="width:80%;" runat="server"></asp:TextBox>
-                <br />
-                <asp:Label ID="lblPresID" runat="server" Text=""></asp:Label>
-            </td>
-        </tr>
+        
         <tr>
             <td class="auto-style2">*Medication Name:</td>
             <td>

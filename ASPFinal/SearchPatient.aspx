@@ -92,8 +92,7 @@ function SelectAll(id)
                             <asp:BoundField HeaderText="Home Phone" DataField="Home_Phone" SortExpression="Home_Phone" />
                             <asp:BoundField HeaderText="Cell Phone" DataField="Cell_Phone" SortExpression="Cell_Phone" />                           
                             <asp:BoundField HeaderText="Email" DataField="Email_I" SortExpression="Email_I" />
-                            <asp:BoundField HeaderText="Email" DataField="Email_II" SortExpression="Email_II" />
-                            <asp:BoundField HeaderText="Email" DataField="Email_III" SortExpression="Email_III" />
+
 
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>

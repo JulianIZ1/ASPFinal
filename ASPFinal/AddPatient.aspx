@@ -29,15 +29,9 @@
 
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
-        <!--Don't need-->
-        <tr>
-            <td class="auto-style2">* Patient ID:</td>
-            <td>
-                <asp:TextBox ID="txtPatID" style="width:90%;" runat="server" ValidationGroup="a"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="firstValidator" runat="server" ErrorMessage="Must be 5 characters and begin with 'P'." Text="Must be 5 characters and begin with 'P'." ValidationExpression = "^[\s\S]{0,5}$" ControlToValidate="txtPatID" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>           
-            </td>
-        </tr>
+
+        <!-- First name     Middle Initial      Last name      Gender       DOB     Street      city        zip-->
+
         <tr>
             <td class="auto-style2">* First Name:</td>
             <td>
@@ -135,22 +129,8 @@
                 <br />
             </td>
         </tr>
-        <!--Don't need-->
-        <tr>
-            <td class="auto-style2">Email:</td>
-            <td>
-                <asp:TextBox ID="txtEmailII" style="width:90%;" runat="server"></asp:TextBox>
-                <br />
-            </td>
-        </tr>
-        <!--Dont need-->
-        <tr>
-            <td class="auto-style2">Email:</td>
-            <td>
-                <asp:TextBox ID="txtEmailIII" style="width:90%;" runat="server"></asp:TextBox>
-                <br />
-            </td>
-        </tr>
+
+
         <tr>
             <td>               
             </td>

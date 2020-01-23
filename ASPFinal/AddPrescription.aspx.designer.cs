@@ -15,24 +15,6 @@ namespace ASPFinal
     {
 
         /// <summary>
-        /// txtPrescriptionID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrescriptionID;
-
-        /// <summary>
-        /// lblPresID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPresID;
-
-        /// <summary>
         /// txtMedicationName control.
         /// </summary>
         /// <remarks>
