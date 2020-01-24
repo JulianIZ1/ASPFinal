@@ -107,7 +107,6 @@
                 <br />
             </td>
         </tr>
-        <!--Add in stuff for social secuirty number-->
         <tr>
             <td class="auto-style2">Home Phone:</td>
             <td>
@@ -135,7 +134,7 @@
             <td>               
             </td>
             <td>
-                <asp:Button ID="btnAdd" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()"/>
+                <asp:Button ID="btnAdd" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()" OnClick="btnAdd_Click"/>
                 <asp:Button ID="btnHidden" runat="server" Text="Update Record"/>
                 <asp:Button ID="btnClose" runat="server" Text="Close"/>
                 <asp:Label ID="lblDisplay" runat="server"></asp:Label>
