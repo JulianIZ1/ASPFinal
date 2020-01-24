@@ -44,7 +44,7 @@
 
  </div>	                   
 	    
-         <div class="footer">&copy  Umbrella Corp. | (111)123-4567 | ABC Morea, Mega, PA | XYZCorp@Zipps.com</div>
+         <div class="footer">&copy  Umbrella Corp. | (111)123-4567 | Arklay County, Raccoon City, Wyoming | UmbrellaCorp@Zipps.com</div>
         
     
 </asp:Content>
