@@ -28,7 +28,6 @@ namespace ASPFinal
 
         }
 
-        /*
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             if ((txtPatientID.Text.Trim() != "") && (txtFName.Text.Trim() != "") && (txtLName.Text.Trim() != "") && (txtMidInit.Text.Trim() !=""))
@@ -76,6 +75,5 @@ namespace ASPFinal
             }
             grdPatient.DataBind();
         }
-        */
     }
 }
