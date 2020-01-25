@@ -50,6 +50,7 @@ namespace ASPFinal
             ViewState["vFName"] = txtFName.Text.Trim();
             ViewState["vMidInit"] = txtMidInit.Text.Trim();
             ViewState["vLName"] = txtLName.Text.Trim();
+            ViewState["vgender"] = ddlGender.Text.Trim();
 
 
 
