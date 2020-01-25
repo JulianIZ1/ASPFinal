@@ -63,10 +63,10 @@ function SelectAll(id)
                 <asp:ListItem>OTHER</asp:ListItem>
                 </asp:DropDownList></td>
         </tr>        
-        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" /><asp:Button ID="btnClose" runat="server" Text="Close" /></td></tr>
+        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" /></td></tr>
         <tr>
             <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">
+                    <asp:GridView ID="grdPatient" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
                             <asp:TemplateField HeaderText="Customer ID" >  
