@@ -7,7 +7,7 @@ GO
 -- Create date: 1/23/2020
 -- Description:	Add, View, Delete, and Select procedures for student
 -- =============================================
-CREATE PROCEDURE Student_Procedures 
+CREATE PROCEDURE Patient_Procedures 
 	-- Add the parameters for the stored procedure here
 	@patient_id int,
 	@fname varchar(25),
