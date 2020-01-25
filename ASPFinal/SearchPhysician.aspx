@@ -4,7 +4,7 @@
 function SelectAll(id)
 {
             //get reference of GridView control
-            var grid = document.getElementById("<%= grdPhysician.ClientID %>");
+            var grid = document.getElementById("<%= grdStudents.ClientID %>");
             //variable to contain the cell of the grid
             var cell;
             

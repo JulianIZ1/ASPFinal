@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
 namespace ASPFinal
 {
@@ -12,10 +11,7 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Do end it
-            }
+
         }
 <<<<<<< HEAD
 
@@ -28,6 +24,7 @@ namespace ASPFinal
         {
 
         }
+<<<<<<< HEAD
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
@@ -73,5 +70,7 @@ namespace ASPFinal
         }
 =======
 >>>>>>> parent of 50d7ba7... Dashboard tabs are running
+=======
+>>>>>>> parent of a6653a9... datadbind for search patient
     }
 }
