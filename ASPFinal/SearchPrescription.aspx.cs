@@ -17,6 +17,7 @@ namespace ASPFinal
                 // Do end it
             }
         }
+<<<<<<< HEAD
 
         protected void Delete_Click(object sender, EventArgs e)
         {
@@ -70,5 +71,7 @@ namespace ASPFinal
             }
             grdPrescription.DataBind();
         }
+=======
+>>>>>>> parent of 50d7ba7... Dashboard tabs are running
     }
 }
