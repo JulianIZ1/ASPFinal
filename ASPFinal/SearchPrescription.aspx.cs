@@ -26,6 +26,7 @@ namespace ASPFinal
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
@@ -71,6 +72,8 @@ namespace ASPFinal
         }
 =======
 >>>>>>> parent of 50d7ba7... Dashboard tabs are running
+=======
+>>>>>>> parent of a6653a9... datadbind for search patient
 =======
 >>>>>>> parent of a6653a9... datadbind for search patient
 =======
