@@ -14,7 +14,7 @@ namespace ASPFinal
         static SqlConnection myConn = new SqlConnection(connString);
         static System.Data.SqlClient.SqlCommand cmdString = new System.Data.SqlClient.SqlCommand();
 
-        public DataSet getphysician(string phyid, string fname, string midint, string lname, string v, DateTime dateTime, string gender, string streetname, string city, Decimal zip, string docstate, string officephone, string personalphone, string workemail, string personalemail, string speciality, Decimal salary)
+        public DataSet getphysician(int phyid, string fname, string midint, string lname, string v, DateTime dateTime, string gender, string streetname, string city, Decimal zip, string docstate, string officephone, string personalphone, string workemail, string personalemail, string speciality, Decimal salary)
         {
             try
             {
@@ -24,9 +24,9 @@ namespace ASPFinal
                 cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "getphysician";  //name of stored procedure
+                cmdString.CommandText = "find_physician";  //name of stored procedure
                 //Define input parameter
-                cmdString.Parameters.Add("@stud_ID", SqlDbType.VarChar, 6).Value = phyid;    //parameter names must match and in same
+                cmdString.Parameters.Add("@physician_id", SqlDbType.Int).Value = phyid;    //parameter names must match and in same
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;
                 cmdString.Parameters.Add("@midint", SqlDbType.VarChar, 1).Value = midint;
                 cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;

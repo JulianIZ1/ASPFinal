@@ -5,7 +5,7 @@
 function SelectAll(id)
 {
             //get reference of GridView control
-            var grid = document.getElementById("<%= grdStudents.ClientID %>");
+            var grid = document.getElementById("<%= grdPatient.ClientID %>");
             //variable to contain the cell of the grid
             var cell;
             
@@ -40,8 +40,7 @@ function SelectAll(id)
             <a href="ViewPhysicians.aspx">Doctors</a>
             <a href="" class="active">Patients</a>
             <a href="Home.html">Logout</a>
-            <a class="callButton callBtnAdv verticalCenter"href="">Call Us Today</a>
-            <a class="consultButton consultBtnAdv verticalCenter"href="">Free Consultation</a>
+
         </div>
     
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>

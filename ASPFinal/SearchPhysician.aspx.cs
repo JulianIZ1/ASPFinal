@@ -49,7 +49,7 @@ namespace ASPFinal
             PhysicianDataTier aDatatier = new PhysicianDataTier();
             ViewState["vphyid"] = txtPhysicianID.Text.Trim();
             ViewState["vflame"] = txtFName.Text.Trim();
-            ViewState["vmidint"] = txtMidint.Text.Trim();
+            ViewState["vmidinit"] = txtMidint.Text.Trim();
             ViewState["vlname"] = txtLName.Text.Trim();
             ViewState["vgender"] = ddlGender.Text.Trim();
             ViewState["vofficephone"] = txtOfficePhone.Text.Trim();
@@ -60,7 +60,7 @@ namespace ASPFinal
 
             DataSet aDataSet = new DataSet();
             aDataSet = aDatatier.getphysician(Convert.ToString(ViewState["vphyid"]),
-                Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vmidint"]),
+                Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vmidinit"]),
                 Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]), 
                 Convert.ToString(ViewState["vofficephone"]), Convert.ToString(ViewState["vworkemail"]),
                 Convert.ToString(ViewState["vposition"]), Convert.ToString(ViewState["vspeciality"]),

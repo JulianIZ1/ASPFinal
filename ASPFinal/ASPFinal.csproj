@@ -164,7 +164,8 @@
     <Compile Include="AddRefills.aspx.designer.cs">
       <DependentUpon>AddRefills.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PhysicianDataTier.cs" />
+    <Compile Include="DataTiers\PatientDataTier.cs" />
+    <Compile Include="DataTiers\PhysicianDataTier.cs" />
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
