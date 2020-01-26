@@ -35,8 +35,7 @@
             <a href="" class="active">Doctors</a>
             <a href="ViewPatients.aspx">Patients</a>
             <a href="Home.html">Logout</a>
-            <a class="callButton callBtnAdv verticalCenter"href="">Call Us Today</a>
-            <a class="consultButton consultBtnAdv verticalCenter"href="">Free Consultation</a>
+
         </div>
     <table class="auto-style1">
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>     

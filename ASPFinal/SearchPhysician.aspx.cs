@@ -64,10 +64,10 @@ namespace ASPFinal
                 Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]), 
                 Convert.ToString(ViewState["vofficephone"]), Convert.ToString(ViewState["vworkemail"]),
                 Convert.ToString(ViewState["vposition"]), Convert.ToString(ViewState["vspeciality"]),
-                Convert.ToDateTime(ViewState["vdatetime"]), Convert.ToString(ViewState["vstreetname"]),
+                Convert.ToString(ViewState["vdatetime"]), Convert.ToString(ViewState["vstreetname"]),
                 Convert.ToString(ViewState["vcity"]), Convert.ToString(ViewState["vdoc_state"]),
-                Convert.ToDecimal(ViewState["vzip"]), Convert.ToString(ViewState["vpersonalphone"]),
-                Convert.ToString(ViewState["personalemail"]), Convert.ToDecimal(ViewState["salary"]));
+                Convert.ToString(ViewState["vzip"]), Convert.ToString(ViewState["vpersonalphone"]),
+                Convert.ToString(ViewState["personalemail"]), Convert.ToString(ViewState["salary"]));
 
             grdPhysician.DataSource = aDataSet.Tables[0];
 
