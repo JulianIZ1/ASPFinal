@@ -18,9 +18,8 @@ GO
 -- Create date: 1/25/2020
 -- Description:	Add a Patient
 -- =============================================
-CREATE PROCEDURE Add_Paitent
+Create PROCEDURE Add_Patient
 	-- Add the parameters for the stored procedure here
-	@patient_id int,
 	@fname varchar(25),
 	@midint varchar(1),
 	@lname varchar(25),

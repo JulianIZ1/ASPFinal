@@ -125,14 +125,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">*Position:</td>
-            <td>
-                <asp:TextBox ID="txtPosition" style="width:90%;" runat="server"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="A position is required." Text="A position is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtPosition" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style2">Specialty:</td>
             <td>
                 <asp:TextBox ID="txtSpecialty" style="width:90%;" runat="server"></asp:TextBox>
@@ -153,7 +145,7 @@
             </td>
             <td>
                 <asp:Button ID="btnAdd" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()"/>
-                <asp:Button ID="btnHidden" runat="server" Text="Add Record"/>
+                <asp:Button ID="btnHidden" runat="server" Text="Add Record" OnClick="btnHidden_Click"/>
                 <asp:Button ID="btnClose" runat="server" Text="Close"/>
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>

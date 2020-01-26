@@ -10,7 +10,7 @@ namespace ASPFinal
     public partial class AddPhysician : System.Web.UI.Page
     {
         // Global Varibales
-        string fname, midint, lname, gender, address, city, state, zip, home, cell, email, dt;
+        string dt;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace ASPFinal
             {
                 PhysicianDataTier.AddPhysician(txtFName.Text, txtMidInit.Text, txtLName.Text, ddlGender.Text, txtStreet.Text,
                     txtCity.Text, ddlState.Text, decimal.Parse(txtZIP.Text), DateTime.Parse(txtDOB.Text), txtOfficePhone.Text,
-                    txtPersonalPhone.Text, txtEmailI.Text, txtWorkEmail.Text, txtPosition.Text, txtSpecialty.Text, decimal.Parse(txtSalary.Text));
+                    txtPersonalPhone.Text, txtEmailI.Text, txtWorkEmail.Text, txtSpecialty.Text, decimal.Parse(txtSalary.Text));
 
                 reply = "Success";
                 lblDisplay.Text = reply;
@@ -46,5 +46,6 @@ namespace ASPFinal
 
             }
         }
+
     }
 }
