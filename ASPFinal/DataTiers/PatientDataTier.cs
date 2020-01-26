@@ -75,7 +75,7 @@ namespace ASPFinal
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;
                 cmdString.Parameters.Add("@midint", SqlDbType.VarChar, 1).Value = midint;
                 cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;
-                cmdString.Parameters.Add("@dob", SqlDbType.DateTime).Value = dateTime;
+                cmdString.Parameters.Add("@dob", SqlDbType.Date).Value = dateTime;
                 cmdString.Parameters.Add("@gender", SqlDbType.Char, 6).Value = gender;
                 cmdString.Parameters.Add("@streetname", SqlDbType.VarChar, 40).Value = streetname;
                 cmdString.Parameters.Add("@city", SqlDbType.VarChar, 40).Value = city;
