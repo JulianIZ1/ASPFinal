@@ -16,7 +16,7 @@ namespace ASPFinal
         static System.Data.SqlClient.SqlCommand cmdString = new System.Data.SqlClient.SqlCommand();
 
 
-        public DataSet AddPhysician(string phyid, string fname, string midint, string lname, DateTime dob, string gender, string streetname,
+        public DataSet AddPhysician(string fname, string midint, string lname, DateTime dob, string gender, string streetname,
             string city, decimal zip, string docstate, string officephone, string personalphone, string workemail, string personalemail, string speciality, decimal salary)
         {
 
