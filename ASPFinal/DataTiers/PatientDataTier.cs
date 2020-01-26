@@ -24,7 +24,7 @@ namespace ASPFinal
                 cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "Find_Patient";  //name of stored procedure
+                cmdString.CommandText = "Find_Paitent";  //name of stored procedure
                 //Define input parameter
                 cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;    //parameter names must match and in same
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;
