@@ -14,7 +14,7 @@ namespace ASPFinal
         static SqlConnection myConn = new SqlConnection(connString);
         static System.Data.SqlClient.SqlCommand cmdString = new System.Data.SqlClient.SqlCommand();
 
-        public DataSet getpatient(int patid, string fname, string midint, string lname, string v, DateTime dateTime, string gender, string streetname, string city, Decimal zip, string paitstate, string homephone, string cellphone, string email, string statementtype)
+        public DataSet getpatient(int patid, string fname, string midint, string lname, string v, DateTime dateTime, string gender, string streetname, string city, Decimal zip, string paitstate, string homephone, string cellphone, string email)
         {
             try
             {
@@ -39,7 +39,6 @@ namespace ASPFinal
                 cmdString.Parameters.Add("@home_phone", SqlDbType.NChar, 14).Value = homephone;
                 cmdString.Parameters.Add("@cell_phone", SqlDbType.NChar, 14).Value = cellphone;
                 cmdString.Parameters.Add("@email", SqlDbType.VarChar, 60).Value = email;
-                cmdString.Parameters.Add("@statementType", SqlDbType.NVarChar, 20).Value = statementtype;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;
@@ -57,11 +56,6 @@ namespace ASPFinal
             {
                 myConn.Close();
             }
-        }
-
-        internal DataSet getpatient(string v1, string v2, string v3, string v4, string v5, DateTime dateTime, string v6, string v7, string v8, decimal v9, string v10, string v11, string v12, string v13)
-        {
-            throw new NotImplementedException();
         }
     }
 }

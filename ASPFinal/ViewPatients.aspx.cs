@@ -14,6 +14,11 @@ namespace ASPFinal
 
         }
 
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
         protected void lbtnEdit_Click(object sender, EventArgs e)
         {
             
