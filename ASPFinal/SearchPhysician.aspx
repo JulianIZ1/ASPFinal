@@ -4,7 +4,7 @@
 function SelectAll(id)
 {
             //get reference of GridView control
-            var grid = document.getElementById("<%= grdStudents.ClientID %>");
+            var grid = document.getElementById("<%= grdPhysician.ClientID %>");
             //variable to contain the cell of the grid
             var cell;
             
@@ -49,6 +49,7 @@ function SelectAll(id)
     <table class="auto-style1">
         <tr><td class="searchPara"><asp:Label ID="lblPhysicianID" runat="server" Text="Physician ID:"></asp:Label><asp:TextBox ID="txtPhysicianID" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label><asp:TextBox ID="txtFName" runat="server"></asp:TextBox></td>
+            <td class="searchPara"><asp:Label ID="lblMidint" runat="server" Text="Middle Int:"></asp:Label><asp:TextBox ID="txtMidint" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label><asp:TextBox ID="txtLName" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblGender" runat="server" Text="Gender:"></asp:Label><asp:DropDownList ID="ddlGender" runat="server">
                 <asp:ListItem>MALE</asp:ListItem>
