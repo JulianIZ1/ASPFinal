@@ -14,14 +14,25 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Author:		Julian Smith
+-- Create date: 1/25/2020
+-- Description:	Add a Patient
 -- =============================================
-CREATE PROCEDURE EDIT
+CREATE PROCEDURE Add_Paitent
 	-- Add the parameters for the stored procedure here
-	@STUDENT_ID varchar(25),
-	@LNAME varchar(25)
+	@patient_id int,
+	@fname varchar(25),
+	@midint varchar(1),
+	@lname varchar(25),
+	@gender char(6),
+	@dob	date,
+	@streetname varchar(60),
+	@city varchar(60),
+	@pait_state char(2),
+	@zip	decimal(5,0),
+	@home_phone nchar(14),
+	@cell_phone nchar(14),
+	@email varchar(60)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -29,7 +40,10 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update Test_Student Set
-	LNAME = @LNAME
+	insert into patient (fname, midint, lname, gender, dob, 
+							 streetname, city, pait_state, zip, home_phone, cell_phone,
+							 email)
+		values (@fname, @midint, @lname, @gender, @dob, @streetname,
+				@city, @pait_state, @zip, @home_phone, @cell_phone, @email)
 END
 GO

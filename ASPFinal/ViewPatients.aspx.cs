@@ -13,5 +13,11 @@ namespace ASPFinal
         {
 
         }
+
+        protected void lbtnEdit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
