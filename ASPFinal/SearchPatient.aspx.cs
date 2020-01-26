@@ -55,7 +55,7 @@ namespace ASPFinal
 
 
             DataSet aDataSet = new DataSet();
-            aDataSet = aDatatier.getpatient(Convert.ToInt32(ViewState["vpatid"]),
+            aDataSet = aDatatier.getpatient(Convert.ToString(ViewState["vpatid"]),
                 Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vmidinit"]),
                 Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]),
                 Convert.ToDateTime(ViewState["vdob"]), Convert.ToString(ViewState["vstreetname"]),
