@@ -59,7 +59,7 @@ namespace ASPFinal
             }
         }
 
-        internal DataSet getpatient(string patid, string fname, string midint, string lname, string gender, DateTime dateTime, string streetname, string city, string paitstate, decimal zip, string homephone, string cellphone, string email, string statementtype)
+        public DataSet getpatient(string patid, string fname, string midint, string lname, string gender, DateTime dateTime, string streetname, string city, string paitstate, decimal zip, string homephone, string cellphone, string email, string statementtype)
         {
              String connString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
              SqlConnection myConn = new SqlConnection(connString);
@@ -70,7 +70,6 @@ namespace ASPFinal
                 myConn.Open();   //open connection
                 cmdString.Parameters.Clear();      //clear command argument
                 //command
-                cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
                 cmdString.CommandText = "Find_Patient";  //name of stored procedure
