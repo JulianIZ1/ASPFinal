@@ -56,13 +56,7 @@ namespace ASPFinal
 
             DataSet aDataSet = new DataSet();
             aDataSet = aDatatier.getpatient(Convert.ToString(ViewState["vpatid"]),
-                Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vmidinit"]),
-                Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]),
-                Convert.ToDateTime(ViewState["vdob"]), Convert.ToString(ViewState["vstreetname"]),
-                Convert.ToString(ViewState["vcity"]), Convert.ToString(ViewState["vpait_state"]),
-                Convert.ToDecimal(ViewState["vzip"]), Convert.ToString(ViewState["vhome_phone"]),
-                Convert.ToString(ViewState["vcell_phone"]), Convert.ToString(ViewState["vemail"]),
-                Convert.ToString(ViewState["vstatementType"]));
+                Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]));
 
             grdPatient.DataSource = aDataSet.Tables[0];
 
