@@ -28,7 +28,7 @@ create table patient(
 					check(lname LIKE '%[A-Z]%'),
 	gender		char(6) not null
 					check(gender in('Male', 'Female')),
-	dob			date not null,
+	dob			datetime2 not null,
 	streetname  varchar(40) not null,
 	city		varchar(60) not null,
 	pait_state  char(2) not null
@@ -58,7 +58,7 @@ create table physician(
 						check(midint LIKE '%[A-Z]%'),
 	lname			varchar(25) not null
 						check(lname LIKE '%[A-Z]%'),	
-	dob				date not null,
+	dob				datetime2 not null,
 	gender			char(6) not null
 						check(gender in('Male', 'Female')),
 	streetname		varchar(40) null,

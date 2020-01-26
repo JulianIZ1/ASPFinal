@@ -32,10 +32,10 @@ BEGIN
     -- Statement will add a user to the database
 	if @statementType = 'Insert'
 	begin
-		insert into patient (patient_id, fname, midint, lname, gender, dob, 
+		insert into patient (fname, midint, lname, gender, dob, 
 							 streetname, city, pait_state, zip, home_phone, cell_phone,
 							 email)
-		values (@patient_id, @fname, @midint, @lname, @gender, @dob, @streetname,
+		values (@fname, @midint, @lname, @gender, @dob, @streetname,
 				@city, @pait_state, @zip, @home_phone, @cell_phone, @email)
 	end
 
@@ -44,7 +44,7 @@ BEGIN
 		begin
 			select *
 			From patient
-				where fname = @fname
+				where  fname = @fname or
 	end
 
 	-- Statement will update the user in the database
