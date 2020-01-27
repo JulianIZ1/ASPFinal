@@ -88,7 +88,7 @@
         <tr>
             <td>
                 <asp:Button ID="btnAdd" runat="server" Text="Add Record" CausesValidation="False" OnClick="btnAdd_Click"/>
-                <asp:Button ID="btnClose" runat="server" Text="Close" CausesValidation="False"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" CausesValidation="False" OnClick="btnClose_Click"/>
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>

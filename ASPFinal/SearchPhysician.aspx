@@ -60,7 +60,7 @@ function SelectAll(id)
             <td class="searchPara"><asp:Label ID="lblWorkEmail" runat="server" Text="Work Email:"></asp:Label><asp:TextBox ID="txtWorkEmail" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblPosition" runat="server" Text="Position:"></asp:Label><asp:TextBox ID="txtPosition" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblSpecialty" runat="server" Text="Specialty:"></asp:Label><asp:TextBox ID="txtSpecialty" runat="server"></asp:TextBox></td>
-        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" /></td></tr>
+        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose"/></td></tr>
         <tr>
             <td colspan="2">
                     <asp:GridView ID="grdPhysician" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">

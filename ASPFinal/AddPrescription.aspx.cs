@@ -43,6 +43,10 @@ namespace ASPFinal
 
             }
         }
+        protected void btnClose_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ViewPrescriptions.aspx");
+        }
 
     }
 }

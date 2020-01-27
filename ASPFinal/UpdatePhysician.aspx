@@ -162,7 +162,7 @@
             <td>
                 <asp:Button ID="btnUpdate" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()"/>
                 <asp:Button ID="btnHidden" runat="server" Text="Update Record"/>
-                <asp:Button ID="btnClose" runat="server" Text="Close"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click"/>
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>

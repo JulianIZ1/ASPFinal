@@ -49,9 +49,9 @@
             <td>               
             </td>
             <td>
-                <asp:Button ID="btnUpdate" runat="server" Text="Update Record" ValidationGroup="firstGroup" OnClientClick="return Validate()"/>
+                <asp:Button ID="btnUpdate" runat="server" Text="Update Record" ValidationGroup="firstGroup" OnClientClick="return Validate()" OnClick="btnUpdate_Click"/>
                 <asp:Button ID="btnHidden" runat="server" Text="" width="0" Height="0" />
-                <asp:Button ID="btnClose" runat="server" Text="Close"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click"/>
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>
