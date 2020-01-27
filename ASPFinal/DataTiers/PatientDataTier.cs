@@ -109,9 +109,9 @@ namespace ASPFinal
 
 
         }
-            public static DataSet ViewPatient()
-            {
+        public static DataSet ViewPatient(string fname, string lname, string streetname, string city, string viewstate, decimal zip, DateTime dob)
+        {
 
-            }
+        }
     }
 }
