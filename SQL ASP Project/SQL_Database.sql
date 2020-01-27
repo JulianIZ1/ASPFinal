@@ -94,9 +94,11 @@ create table prescription(
 						check(rx_number Like '[0-9][0-9][0-9]'),
 	medication_name varchar(50) not null,
 	refill_amt		decimal(3,0) not null,
+	refill_date		DateTime2 (7) not null,
 	dosage			char(3) not null
 						check(dosage Like '[0-9][0-9][0-9]'),
-	intake_method	varchar(50) not null,
+	intake_method	varchar(250) not null,
+	frequency		varchar(50) not null,
 	patient_id		int constraint fk_prescription_patient_id
 					foreign key (patient_id) references patient(patient_id)
 					not null,
@@ -106,5 +108,5 @@ create table prescription(
 )
 
 -- Inserts a value into the prescription table
-insert into prescription(rx_number, medication_name, refill_amt, dosage, intake_method, patient_id, physician_id)
-values('302', 'Penicillin', '20', '050', 'Orally', 1, 1)
+insert into prescription(rx_number, medication_name, refill_amt, refill_date, dosage, frequency, intake_method, patient_id, physician_id)
+values('302', 'Penicillin', '20', '2/27/2020', '050', 'Orally', 'Take once daily', 1, 1)

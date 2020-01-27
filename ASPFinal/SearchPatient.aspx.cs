@@ -72,5 +72,10 @@ namespace ASPFinal
             }
             grdPatient.DataBind();
         }
+
+        protected void btnClose_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ViewPatients.aspx");
+        }
     }
 }

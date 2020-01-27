@@ -106,6 +106,11 @@ namespace ASPFinal
             {
                 myConn.Close(); 
             }
+
+            public static DataSet ViewPatient()
+            {
+
+            }
         }
 
     }
