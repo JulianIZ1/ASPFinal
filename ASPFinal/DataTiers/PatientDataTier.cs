@@ -109,9 +109,33 @@ namespace ASPFinal
 
 
         }
-        public static DataSet ViewPatient(string fname, string lname, string streetname, string city, string viewstate, decimal zip, DateTime dob)
-        {
 
+        public DataSet ViewPatient()
+        {
+            try
+            {
+                myConn.Open();
+                cmdString.Parameters.Clear();
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "ViewPatient";
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                dataAdapter.SelectCommand = (cmdString);
+                DataSet dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet);
+
+                return dataSet;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
         }
     }
 }
