@@ -15,6 +15,24 @@ namespace ASPFinal
     {
 
         /// <summary>
+        /// txtRXNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRXNum;
+
+        /// <summary>
+        /// lblRXNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRXNum;
+
+        /// <summary>
         /// txtMedicationName control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace ASPFinal
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRefillAmt;
+
+        /// <summary>
+        /// txtRefillDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRefillDate;
 
         /// <summary>
         /// lblRefillDate control.
@@ -114,13 +141,13 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.Label lblFrequency;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// txtPatID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtPatID;
 
         /// <summary>
         /// lblPatID control.
@@ -132,13 +159,13 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.Label lblPatID;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// txtPhysID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.TextBox txtPhysID;
 
         /// <summary>
         /// lblPhyID control.

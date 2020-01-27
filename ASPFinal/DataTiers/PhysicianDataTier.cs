@@ -66,10 +66,6 @@ namespace ASPFinal
             }
         }
 
-
-
-
-
         public DataSet getphysician(string phyid, string fname, string midint, string lname, string v, string dateTime, string gender, string streetname, string city, string zip, string docstate, string officephone, string personalphone, string workemail, string personalemail, string speciality, string salary)
         {
             try

@@ -12,7 +12,14 @@
             <a href="Home.html">Logout</a>
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
-        
+        <tr>
+            <td class="auto-style2">*RX Number:</td>
+            <td>
+                <asp:TextBox ID="txtRXNum" style="width:80%;" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblRXNum" runat="server" Text=""></asp:Label>
+            </td>
+        </tr>
         <tr>
             <td class="auto-style2">*Medication Name:</td>
             <td>
@@ -32,6 +39,8 @@
         <tr>
             <td class="auto-style2">*Refill Date</td>
             <td>
+                <asp:TextBox ID="txtRefillDate" style="width:80%;" runat="server"></asp:TextBox>
+                <br />
                 <asp:Label ID="lblRefillDate" runat="server"></asp:Label>
             </td>  
         </tr>
@@ -62,7 +71,7 @@
         <tr>
             <td class="auto-style2">*Patient ID:</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" style="width:80%;" runat="server"></asp:DropDownList>
+                <asp:TextBox ID="txtPatID" runat="server"></asp:TextBox>
                 <br />               
                 <asp:Label ID="lblPatID" runat="server" Text=""></asp:Label>
             </td>
@@ -70,7 +79,7 @@
         <tr>
             <td class="auto-style2">*Physician ID:</td>
             <td>
-                <asp:DropDownList ID="DropDownList2" style="width:80%;" runat="server"></asp:DropDownList>
+                <asp:TextBox ID="txtPhysID" runat="server"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblPhyID" runat="server" Text=""></asp:Label>                
             </td>
@@ -78,7 +87,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="btnAdd" runat="server" Text="Add Record" CausesValidation="False"/>
+                <asp:Button ID="btnAdd" runat="server" Text="Add Record" CausesValidation="False" OnClick="btnAdd_Click"/>
                 <asp:Button ID="btnClose" runat="server" Text="Close" CausesValidation="False"/>
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
