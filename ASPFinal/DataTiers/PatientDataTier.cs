@@ -109,9 +109,9 @@ namespace ASPFinal
 
 
         }
-            public static DataSet ViewPatient()
+/*            public static DataSet ViewPatient()
             {
 
-            }
+            }*/
     }
 }

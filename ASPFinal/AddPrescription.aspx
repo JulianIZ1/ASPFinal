@@ -6,9 +6,9 @@
     <div class="navbar verticalCenter" align="right" style="background-color:black">
             <img src="Images/logo2.png" class="logo"/>
             <a href="Dashboard.aspx">Dashboard</a>
-            <a href="ViewPrescriptions.aspx">Prescriptions</a>
+            <a href=""class="active">Prescriptions</a>
             <a href="ViewPhysicians.aspx">Doctors</a>
-            <a href="" class="active">Patients</a>
+            <a href="VeiwPatients">Patients</a>
             <a href="Home.html">Logout</a>
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
