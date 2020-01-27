@@ -11,6 +11,7 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            PatientDataTier.ViewPatient();
 
         }
 
