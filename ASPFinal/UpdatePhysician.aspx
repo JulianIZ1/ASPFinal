@@ -25,8 +25,7 @@
             <a href="" class="active">Doctors</a>
             <a href="ViewPatients.aspx">Patients</a>
             <a href="Home.html">Logout</a>
-            <a class="callButton callBtnAdv verticalCenter"href="">Call Us Today</a>
-            <a class="consultButton consultBtnAdv verticalCenter"href="">Free Consultation</a>
+
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
         <tr>
@@ -162,7 +161,7 @@
             <td>
                 <asp:Button ID="btnUpdate" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()"/>
                 <asp:Button ID="btnHidden" runat="server" Text="Update Record"/>
-                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" />
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>
