@@ -26,12 +26,24 @@ namespace ASPFinal
 
         private void LoadData()
         {
-            PatientDataTier dataTier = new PatientDataTier();
+
+
+/*            PatientDataTier dataTier = new PatientDataTier();
+            
             DataSet dataSet = new DataSet();
 
             dataSet = dataTier.ViewPatient();
             grdStudents.DataSource = dataSet.Tables[0];
+            grdStudents.DataBind();*/
+
+
+            PatientDataTier bPharm = new PatientDataTier();
+            DataSet ds1 = new DataSet();
+            ds1 = bPharm.ViewPatient("", "", "","", "", decimal.Parse(""), DateTime.Parse(""));
+
+            grdStudents.DataSource = ds1.Tables[0];
             grdStudents.DataBind();
+
         }
 
 

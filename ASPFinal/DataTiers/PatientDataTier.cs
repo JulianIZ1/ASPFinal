@@ -110,18 +110,22 @@ namespace ASPFinal
 
         }
 
-        public DataSet ViewPatient(string patid, string fname, string lname, string street, string city,
+        public DataSet ViewPatient(string fname, string lname, string street, string city,
                                      string state, decimal zip, DateTime dob)
         {
             try
             {
                 myConn.Open();
                 cmdString.Parameters.Clear();
+
+                cmdString.Connection = myConn;
+                cmdString.CommandText = connString;
+
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
                 cmdString.CommandText = "ViewPatient";
 
-                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
+
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 50).Value = fname;
                 cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 50).Value = lname;
                 cmdString.Parameters.Add("@streetname", SqlDbType.VarChar, 60).Value = street;
@@ -131,7 +135,7 @@ namespace ASPFinal
                 cmdString.Parameters.Add("@dob", SqlDbType.DateTime2, 7).Value = dob;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
-                dataAdapter.SelectCommand = (cmdString);
+                dataAdapter.SelectCommand = cmdString;
                 DataSet dataSet = new DataSet();
 
                 dataAdapter.Fill(dataSet);
