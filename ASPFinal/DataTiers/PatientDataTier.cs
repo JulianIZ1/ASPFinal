@@ -106,8 +106,19 @@ namespace ASPFinal
             {
                 myConn.Close(); 
             }
+        }
 
-            public static DataSet ViewPatient()
+        public static DataSet ViewPatient(string viewfname, string viewlname, string streetname, string viewcity, string viewstate, decimal viewzio, DateTime viewdob)
+        {
+            try
+            {
+
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+            finally
             {
 
             }
