@@ -112,27 +112,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutPage.aspx" />
-    <Content Include="AddPatient.aspx" />
-    <Content Include="AddPhysician.aspx" />
-    <Content Include="AddPrescription.aspx" />
-    <Content Include="AddRefills.aspx" />
+    <Content Include="Patient\AddPatient.aspx" />
+    <Content Include="Physician\AddPhysician.aspx" />
+    <Content Include="Prescription\AddPrescription.aspx" />
+    <Content Include="Prescription\AddRefills.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="DashboardCSS.css" />
     <Content Include="Home.html" />
     <Content Include="main.css" />
     <Content Include="MasterStyle.css" />
     <Content Include="MyScript.js" />
-    <Content Include="SearchPatient.aspx" />
-    <Content Include="SearchPhysician.aspx" />
-    <Content Include="SearchPrescription.aspx" />
+    <Content Include="Patient\SearchPatient.aspx" />
+    <Content Include="Physician\SearchPhysician.aspx" />
+    <Content Include="Prescription\SearchPrescription.aspx" />
     <Content Include="State.xml" />
     <Content Include="StyleSheet.css" />
-    <Content Include="UpdatePatient.aspx" />
-    <Content Include="UpdatePhysician.aspx" />
-    <Content Include="UpdatePrecription.aspx" />
-    <Content Include="ViewPatients.aspx" />
-    <Content Include="ViewPhysicians.aspx" />
-    <Content Include="ViewPrescriptions.aspx" />
+    <Content Include="Patient\UpdatePatient.aspx" />
+    <Content Include="Physician\UpdatePhysician.aspx" />
+    <Content Include="Prescription\UpdatePrecription.aspx" />
+    <Content Include="Patient\ViewPatients.aspx" />
+    <Content Include="Physician\ViewPhysicians.aspx" />
+    <Content Include="Prescription\ViewPrescriptions.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,32 +143,32 @@
     <Compile Include="AboutPage.aspx.designer.cs">
       <DependentUpon>AboutPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddPatient.aspx.cs">
+    <Compile Include="Patient\AddPatient.aspx.cs">
       <DependentUpon>AddPatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddPatient.aspx.designer.cs">
+    <Compile Include="Patient\AddPatient.aspx.designer.cs">
       <DependentUpon>AddPatient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddPhysician.aspx.cs">
+    <Compile Include="Physician\AddPhysician.aspx.cs">
       <DependentUpon>AddPhysician.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddPhysician.aspx.designer.cs">
+    <Compile Include="Physician\AddPhysician.aspx.designer.cs">
       <DependentUpon>AddPhysician.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddPrescription.aspx.cs">
+    <Compile Include="Prescription\AddPrescription.aspx.cs">
       <DependentUpon>AddPrescription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddPrescription.aspx.designer.cs">
+    <Compile Include="Prescription\AddPrescription.aspx.designer.cs">
       <DependentUpon>AddPrescription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddRefills.aspx.cs">
+    <Compile Include="Prescription\AddRefills.aspx.cs">
       <DependentUpon>AddRefills.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddRefills.aspx.designer.cs">
+    <Compile Include="Prescription\AddRefills.aspx.designer.cs">
       <DependentUpon>AddRefills.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataTiers\PatientDataTier.cs" />
@@ -189,69 +189,69 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchPatient.aspx.cs">
+    <Compile Include="Patient\SearchPatient.aspx.cs">
       <DependentUpon>SearchPatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchPatient.aspx.designer.cs">
+    <Compile Include="Patient\SearchPatient.aspx.designer.cs">
       <DependentUpon>SearchPatient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SearchPhysician.aspx.cs">
+    <Compile Include="Physician\SearchPhysician.aspx.cs">
       <DependentUpon>SearchPhysician.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchPhysician.aspx.designer.cs">
+    <Compile Include="Physician\SearchPhysician.aspx.designer.cs">
       <DependentUpon>SearchPhysician.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SearchPrescription.aspx.cs">
+    <Compile Include="Prescription\SearchPrescription.aspx.cs">
       <DependentUpon>SearchPrescription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchPrescription.aspx.designer.cs">
+    <Compile Include="Prescription\SearchPrescription.aspx.designer.cs">
       <DependentUpon>SearchPrescription.aspx</DependentUpon>
     </Compile>
     <Compile Include="state.cs" />
     <Compile Include="StateManager.cs" />
-    <Compile Include="UpdatePatient.aspx.cs">
+    <Compile Include="Patient\UpdatePatient.aspx.cs">
       <DependentUpon>UpdatePatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdatePatient.aspx.designer.cs">
+    <Compile Include="Patient\UpdatePatient.aspx.designer.cs">
       <DependentUpon>UpdatePatient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdatePhysician.aspx.cs">
+    <Compile Include="Physician\UpdatePhysician.aspx.cs">
       <DependentUpon>UpdatePhysician.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdatePhysician.aspx.designer.cs">
+    <Compile Include="Physician\UpdatePhysician.aspx.designer.cs">
       <DependentUpon>UpdatePhysician.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdatePrecription.aspx.cs">
+    <Compile Include="Prescription\UpdatePrecription.aspx.cs">
       <DependentUpon>UpdatePrecription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdatePrecription.aspx.designer.cs">
+    <Compile Include="Prescription\UpdatePrecription.aspx.designer.cs">
       <DependentUpon>UpdatePrecription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPatients.aspx.cs">
+    <Compile Include="Patient\ViewPatients.aspx.cs">
       <DependentUpon>ViewPatients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPatients.aspx.designer.cs">
+    <Compile Include="Patient\ViewPatients.aspx.designer.cs">
       <DependentUpon>ViewPatients.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPhysicians.aspx.cs">
+    <Compile Include="Physician\ViewPhysicians.aspx.cs">
       <DependentUpon>ViewPhysicians.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPhysicians.aspx.designer.cs">
+    <Compile Include="Physician\ViewPhysicians.aspx.designer.cs">
       <DependentUpon>ViewPhysicians.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPrescriptions.aspx.cs">
+    <Compile Include="Prescription\ViewPrescriptions.aspx.cs">
       <DependentUpon>ViewPrescriptions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPrescriptions.aspx.designer.cs">
+    <Compile Include="Prescription\ViewPrescriptions.aspx.designer.cs">
       <DependentUpon>ViewPrescriptions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
