@@ -15,7 +15,12 @@ namespace ASPFinal
         }
         protected void btnClose_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ViewPatients.aspx");
+            ClientScript.RegisterStartupScript(typeof(Page), "closePage", "window.close();", true);
+        }
+
+        protected void btnHidden_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

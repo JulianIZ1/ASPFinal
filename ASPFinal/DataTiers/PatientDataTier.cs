@@ -134,8 +134,8 @@ namespace ASPFinal
             }
         }
 
-        public void UpdatePatient(string studentid, string fname, string lname, string mi, string gender,
-                                string state, DateTime dob)
+        public void UpdatePatient(string patid, string fname, string midint, string lname, string gender,  DateTime dob, string street, string city,
+            string state, decimal zip, string home, string cell, string email)
         {
             try
             {
@@ -145,10 +145,21 @@ namespace ASPFinal
                 cmdString.Connection = myConn;   // command
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "Edit_Student";   //name of the stored procedure
+                cmdString.CommandText = "Update_Paitent";   //name of the stored procedure
                 //Define input parameter
-                cmdString.Parameters.Add("@studentid", SqlDbType.VarChar, 5).Value = studentid;  //parameter must be same as in proc
-                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;
+                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;  //parameter must be same as in proc
+                cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 50).Value = fname;
+                cmdString.Parameters.Add("@midint", SqlDbType.Char, 1).Value = midint;
+                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 50).Value = lname;
+                cmdString.Parameters.Add("@gender", SqlDbType.Char, 6).Value = gender;
+                cmdString.Parameters.Add("@streetname", SqlDbType.VarChar, 60).Value = street;
+                cmdString.Parameters.Add("@city", SqlDbType.VarChar, 60).Value = city;
+                cmdString.Parameters.Add("@pait_state", SqlDbType.Char, 2).Value = state;
+                cmdString.Parameters.Add("@zip", SqlDbType.Decimal).Value = zip;
+                cmdString.Parameters.Add("@dob", SqlDbType.DateTime2, 7).Value = dob;
+                cmdString.Parameters.Add("@home_phone", SqlDbType.NChar, 14).Value = home;
+                cmdString.Parameters.Add("@cell_phone", SqlDbType.NChar, 14).Value = cell;
+                cmdString.Parameters.Add("@email", SqlDbType.VarChar, 60).Value = email;
 
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;

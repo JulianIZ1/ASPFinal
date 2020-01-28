@@ -67,7 +67,7 @@ namespace ASPFinal
                         if (chk.Checked)
                         {
                             lbl = (Label)row.Controls[0].FindControl("hidPreID");
-                            patid = lbl.Text.Trim();
+                            precid = lbl.Text.Trim();
 
                             std.DeletePrescription(precid);
                         }
