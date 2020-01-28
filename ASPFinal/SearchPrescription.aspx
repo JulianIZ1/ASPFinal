@@ -55,33 +55,13 @@ function SelectAll(id)
         <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" /></td></tr>
         <tr>
             <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" PageSize="10">
+                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                            <asp:TemplateField HeaderText="Customer ID" >  
-                                <HeaderTemplate>
-                                    <asp:CheckBox ID="cbSelectAll" runat="server"  /> &nbsp;
-                                    <asp:LinkButton ID="lbtnDelete" runat="server" OnCommand="Delete_Click" CommandName="lbtnDelete" CommandArgument='<%#Eval("Prescription_ID") %>'>Delete</asp:LinkButton>
-                                </HeaderTemplate>          
-                                <ItemTemplate> 
-                                    <asp:CheckBox ID="chkPreID" runat="server" AutoPostBack="false" /> 
-                                    <asp:Label ID="hidPreID" runat="server" Text='<%#Eval("Prescription_ID") %>' Visible="false"></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
                             <asp:BoundField DataField="Prescription_ID" HeaderText="Prescription ID" SortExpression="Prescription_ID" />
                             <asp:BoundField DataField="Medication_Name" HeaderText="Medication Name" SortExpression="Medication_Name" />
                             <asp:BoundField HeaderText="Physician ID" DataField="Physician_ID" SortExpression="Physician_ID" />
                             <asp:BoundField HeaderText="Patient ID" DataField="Patient_ID" SortExpression="Patient_ID" />
-                            <asp:TemplateField HeaderText="">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbtnEdit" runat="server" OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" CommandArgument='<% # Eval("Prescription_ID")%>'>Edit</asp:LinkButton>&nbsp;&nbsp;
-                                </ItemTemplate>
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval("Prescription_ID")%>' OnCommand="Delete_Click" CommandName="btnDelete" ImageUrl="~/images/Delete.png" Height ="30"  Width ="30" CausesValidation="false"  />||
-                                    <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval("Prescription_ID") %>' OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" ImageUrl="~/images/Edit.jpg" Height ="30"  Width ="30" CausesValidation="false" />        
-                                </ItemTemplate>
-                                <HeaderStyle HorizontalAlign="Left" />           
-                            </asp:TemplateField>    
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!

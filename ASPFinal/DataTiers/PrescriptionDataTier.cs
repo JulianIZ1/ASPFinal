@@ -91,5 +91,40 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
+        public DataSet getprescription(string precid, string medit, string phyid, string patid)
+        {
+            try
+            {
+                myConn.Open();   //open connection
+                cmdString.Parameters.Clear();      //clear command argument
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "find_prescription";  //name of stored procedure
+                //Define input parameter
+                cmdString.Parameters.Add("@prescription_id", SqlDbType.Int).Value = precid;    //parameter names must match and in same
+                cmdString.Parameters.Add("@medicationname", SqlDbType.Int).Value = medit;
+                cmdString.Parameters.Add("@physician_id", SqlDbType.Int).Value = phyid;
+                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+                // fill adapater
+                aAdapter.Fill(aDataSet);
+                //return dataSet
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+
+        }
     }
 }

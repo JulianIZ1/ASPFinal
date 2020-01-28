@@ -63,7 +63,7 @@ namespace ASPFinal
             // Cache for a while
             if (Cache["CustomerData"] != null)
             {
-                Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
+                Cache.Add("PhysicianData", new DataView(aDataSet.Tables[0]),
                     null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),
                     System.Web.Caching.CacheItemPriority.Default, null);
             }
