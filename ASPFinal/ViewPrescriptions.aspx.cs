@@ -13,7 +13,7 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataBind();
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace ASPFinal
             PrescriptionDataTier aDatatier = new PrescriptionDataTier();
 
             DataSet aDataSet = new DataSet();
-            aDataSet = aDatatier.ViewPrescription("", "", "");
+            aDataSet = aDatatier.ViewPrescription("");
 
             grdStudents.DataSource = aDataSet.Tables[0];
 

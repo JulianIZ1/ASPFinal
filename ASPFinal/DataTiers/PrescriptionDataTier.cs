@@ -60,7 +60,7 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
-        public DataSet ViewPrescription(string phyid, string fname, string lname)
+        public DataSet ViewPrescription(string phyid)
         {
             try
             {
@@ -73,8 +73,6 @@ namespace ASPFinal.DataTiers
                 cmdString.CommandText = "Search_Prescription";  //name of stored procedure
                 //Define input parameters
                 cmdString.Parameters.Add("@PrescriptionID", SqlDbType.VarChar, 25).Value = phyid;
-                cmdString.Parameters.Add("@PatientID", SqlDbType.VarChar, 25).Value = fname;         // order as in stored procedure
-                cmdString.Parameters.Add("@PhysicianID", SqlDbType.VarChar, 25).Value = lname;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;

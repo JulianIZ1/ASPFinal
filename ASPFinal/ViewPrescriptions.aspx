@@ -67,14 +67,16 @@ function SelectAll(id)
                             </asp:TemplateField>
 
                             <asp:BoundField DataField="PRESCRIPTION_ID" HeaderText="Prescription ID" SortExpression="PRESCRIPTION_ID" />
+                            <asp:BoundField DataField="RX_NUMBER" HeaderText="RX Number" SortExpression="RX_NUMBER" />
                             <asp:BoundField DataField="MEDICATION_NAME" HeaderText="Medication Name" SortExpression="MEDICATION_NAME" />
                             <asp:BoundField DataField="REFILL_AMT" HeaderText="Refill Amount" SortExpression="REFILL_AMT" />
                             <asp:BoundField DataField="REFILL_DATE" HeaderText="Refill Date" SortExpression="REFILL_DATE" DataFormatString="{0:MM/dd/yyyy}"/>
-                            <asp:BoundField HeaderText="Dosage" DataField="Dosage" SortExpression="DOSAGE" />
+                            <asp:BoundField DataField="Dosage" HeaderText="Dosage"  SortExpression="DOSAGE" />
                             <asp:BoundField DataField="INTAKE_METHOD" HeaderText="Intake Method" SortExpression="INTAKE_METHOD" />
                             <asp:BoundField DataField="FREQUENCY" HeaderText="Frequency" SortExpression="FREQUENCY" />
-                            <asp:BoundField DataField="PHYSICIAN_ID" HeaderText="Physician ID" SortExpression="PHYSICIAN_ID" />
                             <asp:BoundField HeaderText="PATIENT ID" DataField="Patient_ID" SortExpression="PATIENT_ID" />
+                            <asp:BoundField DataField="PHYSICIAN_ID" HeaderText="Physician ID" SortExpression="PHYSICIAN_ID" />
+                            
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lbtnEdit" runat="server" OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" CommandArgument='<% # Eval("Prescription_ID")%>'>Edit</asp:LinkButton>&nbsp;&nbsp;
