@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -80,9 +81,28 @@ namespace ASPFinal
             }
         }
 
-        protected void lbtnEdit_Click(object sender, EventArgs e)
+       public void lbtnEdit_Click(object sender, CommandEventArgs e)
         {
-            
+            string recordToBeEdited;
+
+            try
+            {
+               recordToBeEdited = e.CommandArgument.ToString().Trim();
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append("<script language='JavaScript'>");
+                sb.Append("window.open('UpdatePatient.aspx?ID=" + recordToBeEdited + "' , 'UpdatePaitent',");
+                sb.Append("'width=525, height=525, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
+                sb.Append("</script");
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         protected void grdStudents_SelectedIndexChanged(object sender, EventArgs e)

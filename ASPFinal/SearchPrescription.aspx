@@ -48,11 +48,8 @@ function SelectAll(id)
     <br />
     <table class="auto-style1">
         <tr><td class="searchPara"><asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID:"></asp:Label><asp:TextBox ID="txtPrescriptionID" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblMedicationName" runat="server" Text="Medication Name:"></asp:Label><asp:TextBox ID="txtMedicationName" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblPhysicianID" runat="server" Text="Physician ID:"></asp:Label><asp:TextBox ID="txtPhysicianID" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblPatientID" runat="server" Text="Patient ID:"></asp:Label><asp:TextBox ID="txtPatientID" runat="server"></asp:TextBox></td>
         
-        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" /></td></tr>
+        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" /></td></tr>
         <tr>
             <td colspan="2">
                     <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True">

@@ -110,7 +110,7 @@ namespace ASPFinal
                 cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "SearchPatient";  //name of stored procedure
+                cmdString.CommandText = "Search_Patient";  //name of stored procedure
                 //Define input parameters
                 cmdString.Parameters.Add("@patientID", SqlDbType.VarChar, 25).Value = patid;
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;         // order as in stored procedure
@@ -131,6 +131,38 @@ namespace ASPFinal
             finally
             {
                 myConn.Close();
+            }
+        }
+
+        public void UpdatePatient(string studentid, string fname, string lname, string mi, string gender,
+                                string state, DateTime dob)
+        {
+            try
+            {
+                myConn.Open();      //open connection
+                cmdString.Parameters.Clear();  //clear previous parameters
+
+                cmdString.Connection = myConn;   // command
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Edit_Student";   //name of the stored procedure
+                //Define input parameter
+                cmdString.Parameters.Add("@studentid", SqlDbType.VarChar, 5).Value = studentid;  //parameter must be same as in proc
+                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;
+
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                //newProjectID = Int32.Parse(cmdString.ExecuteScalar().ToString()); --- not returning any values
+                cmdString.ExecuteNonQuery();
+                //  return newProjectID;    --- not returning any values
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();  //close connection regardless
             }
         }
 

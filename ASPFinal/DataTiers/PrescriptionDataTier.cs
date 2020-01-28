@@ -91,7 +91,7 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
-        public DataSet getprescription(string precid, string medit, string phyid, string patid)
+        public DataSet getprescription(Int32 precid)
         {
             try
             {
@@ -104,9 +104,6 @@ namespace ASPFinal.DataTiers
                 cmdString.CommandText = "find_prescription";  //name of stored procedure
                 //Define input parameter
                 cmdString.Parameters.Add("@prescription_id", SqlDbType.Int).Value = precid;    //parameter names must match and in same
-                cmdString.Parameters.Add("@medicationname", SqlDbType.Int).Value = medit;
-                cmdString.Parameters.Add("@physician_id", SqlDbType.Int).Value = phyid;
-                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;

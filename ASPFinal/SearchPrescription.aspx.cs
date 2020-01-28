@@ -16,6 +16,7 @@ namespace ASPFinal
             if (!IsPostBack)
             {
                 // Do end it
+
             }
         }
 
@@ -35,7 +36,7 @@ namespace ASPFinal
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if ((txtPrescriptionID.Text.Trim() != "") || (txtMedicationName.Text.Trim() != "") || (txtPhysicianID.Text.Trim() != "") || (txtPatientID.Text.Trim() != ""))
+            if ((txtPrescriptionID.Text.Trim() != ""))
             {
                 try
                 {
@@ -52,16 +53,9 @@ namespace ASPFinal
         {
             PrescriptionDataTier aDatatier = new PrescriptionDataTier();
             ViewState["vprescid"] = txtPrescriptionID.Text.Trim();
-            ViewState["vmedname"] = txtMedicationName.Text.Trim();
-            ViewState["vphyid"] = txtPhysicianID.Text.Trim();
-            ViewState["vpatid"] = txtPatientID.Text.Trim();
             
-
-
             DataSet aDataSet = new DataSet();
-            aDataSet = aDatatier.getprescription(Convert.ToString(ViewState["vprescid"]),
-                Convert.ToString(ViewState["vmedname"]), Convert.ToString(ViewState["vphyid"]), 
-                Convert.ToString(ViewState["vphyid"]));
+            aDataSet = aDatatier.getprescription(Convert.ToInt32(ViewState["vprescid"]));
 
             grdStudents.DataSource = aDataSet.Tables[0];
 
