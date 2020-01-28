@@ -60,5 +60,38 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
+        public DataSet ViewPrescription(string phyid, string fname, string lname)
+        {
+            try
+            {
+                myConn.Open();   //open connection
+                cmdString.Parameters.Clear();      //clear command argument
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Search_Prescription";  //name of stored procedure
+                //Define input parameters
+                cmdString.Parameters.Add("@PrescriptionID", SqlDbType.VarChar, 25).Value = phyid;
+                cmdString.Parameters.Add("@PatientID", SqlDbType.VarChar, 25).Value = fname;         // order as in stored procedure
+                cmdString.Parameters.Add("@PhysicianID", SqlDbType.VarChar, 25).Value = lname;
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+                // fill adapater
+                aAdapter.Fill(aDataSet);
+                //return dataSet
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
     }
 }
