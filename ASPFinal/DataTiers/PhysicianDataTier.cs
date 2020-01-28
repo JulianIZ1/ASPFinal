@@ -113,7 +113,7 @@ namespace ASPFinal
             }
 
         }
-        public DataSet ViewPatient(string phyid, string fname, string lname)
+        public DataSet ViewPhysician(string phyid, string fname, string lname)
         {
             try
             {

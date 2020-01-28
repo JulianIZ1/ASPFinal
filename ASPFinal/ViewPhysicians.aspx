@@ -60,7 +60,7 @@
                             </asp:TemplateField>
 
                             <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
+                            <asp:BoundField DataField="MIDINT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
                             <asp:BoundField HeaderText="Gender" DataField="Gender" SortExpression="GENDER" />
                             <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
@@ -72,7 +72,7 @@
                             <asp:BoundField HeaderText="Personal Phone" DataField="Personal_Phone" SortExpression="Personal_Phone" />                           
                             <asp:BoundField HeaderText="Email" DataField="WORK_EMAIL" SortExpression="WORK_EMAIL" />
                             <asp:BoundField HeaderText="Email" DataField="PERSONAL_EMAIL" SortExpression="PERSONAL_EMAIL" />
-                            <asp:BoundField HeaderText="Specialty" DataField="Specialty" SortExpression="Specialty" />
+                            <asp:BoundField HeaderText="Speciality" DataField="Speciality" SortExpression="Speciality" />
                             <asp:BoundField HeaderText="Salary" DataField="Salary" SortExpression="Salary" />
 
                             <asp:TemplateField HeaderText="">

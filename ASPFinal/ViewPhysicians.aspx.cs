@@ -12,7 +12,7 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataBind();
         }
 
         protected void Delete_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace ASPFinal
 
         private void DataBind()
         {
-            PatientDataTier aDatatier = new PatientDataTier();
+            PhysicianDataTier aDatatier = new PhysicianDataTier();
 
             DataSet aDataSet = new DataSet();
             aDataSet = aDatatier.ViewPhysician("", "", "");
