@@ -110,37 +110,33 @@ namespace ASPFinal
 
         }
 
-        public DataSet ViewPatient(string patid, string fname, string lname, string street, string city,
-                                     string state, decimal zip, DateTime dob)
+        public DataSet ViewPatient(string patid, string fname, string lname)
         {
             try
             {
-                myConn.Open();
-                cmdString.Parameters.Clear();
+                myConn.Open();   //open connection
+                cmdString.Parameters.Clear();      //clear command argument
+                //command
+                cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "ViewPatient";
-
-                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
-                cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 50).Value = fname;
-                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 50).Value = lname;
-                cmdString.Parameters.Add("@streetname", SqlDbType.VarChar, 60).Value = street;
-                cmdString.Parameters.Add("@city", SqlDbType.VarChar, 60).Value = city;
-                cmdString.Parameters.Add("@pait_state", SqlDbType.Char, 2).Value = state;
-                cmdString.Parameters.Add("@zip", SqlDbType.Decimal).Value = zip;
-                cmdString.Parameters.Add("@dob", SqlDbType.DateTime2, 7).Value = dob;
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter();
-                dataAdapter.SelectCommand = (cmdString);
-                DataSet dataSet = new DataSet();
-
-                dataAdapter.Fill(dataSet);
-
-                return dataSet;
+                cmdString.CommandText = "SearchPatient";  //name of stored procedure
+                //Define input parameters
+                cmdString.Parameters.Add("@patientID", SqlDbType.VarChar, 25).Value = patid;
+                cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;         // order as in stored procedure
+                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+                // fill adapater
+                aAdapter.Fill(aDataSet);
+                //return dataSet
+                return aDataSet;
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                throw new Exception(Ex.Message);
+                throw new ArgumentException(ex.Message);
             }
             finally
             {

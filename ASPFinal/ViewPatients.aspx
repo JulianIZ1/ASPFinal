@@ -66,11 +66,11 @@ function SelectAll(id)
 
                             <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField DataField="STREET" HeaderText="Street" SortExpression="STREET" />
+                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
                             <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
-                            <asp:BoundField DataField="PATIENT_STATE" HeaderText="State" SortExpression="PATIENT_STATE" />
-                            <asp:BoundField HeaderText="ZIP" DataField="ZIP" SortExpression="ZIP"  />
-                            <asp:BoundField HeaderText="Date of Birth" DataField="DOB" SortExpression="DOB" DataFormatString="{0:MM/dd/yyyy}"/>
+                            <asp:BoundField DataField="PAIT_STATE" HeaderText="State" SortExpression="PATIENT_STATE" />
+                            <asp:BoundField DataField="ZIP" HeaderText="ZIP"  SortExpression="ZIP"  />
+                            <asp:BoundField DataField="DOB" HeaderText="Date of Birth"  SortExpression="DOB" DataFormatString="{0:MM/dd/yyyy}"/>
 
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>
