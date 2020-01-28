@@ -42,15 +42,6 @@ namespace ASPFinal
         protected global::AjaxControlToolkit.AutoCompleteExtender aceLname;
 
         /// <summary>
-        /// aceMidInit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender aceMidInit;
-
-        /// <summary>
         /// acePatientID control.
         /// </summary>
         /// <remarks>
@@ -96,24 +87,6 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.TextBox txtFName;
 
         /// <summary>
-        /// lblMidInit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMidInit;
-
-        /// <summary>
-        /// txtMidInit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMidInit;
-
-        /// <summary>
         /// lblLName control.
         /// </summary>
         /// <remarks>
@@ -130,24 +103,6 @@ namespace ASPFinal
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLName;
-
-        /// <summary>
-        /// lblGender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGender;
-
-        /// <summary>
-        /// ddlGender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
 
         /// <summary>
         /// btnSearch control.

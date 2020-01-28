@@ -49,52 +49,24 @@ function SelectAll(id)
     <table class="auto-style1">
         <tr><td class="searchPara"><asp:Label ID="lblPhysicianID" runat="server" Text="Physician ID:"></asp:Label><asp:TextBox ID="txtPhysicianID" runat="server"></asp:TextBox></td>
             <td class="searchPara"><asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label><asp:TextBox ID="txtFName" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblMidint" runat="server" Text="Middle Int:"></asp:Label><asp:TextBox ID="txtMidint" runat="server"></asp:TextBox></td>
+            
             <td class="searchPara"><asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label><asp:TextBox ID="txtLName" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblGender" runat="server" Text="Gender:"></asp:Label><asp:DropDownList ID="ddlGender" runat="server">
-                <asp:ListItem>MALE</asp:ListItem>
-                <asp:ListItem>FEMALE</asp:ListItem>
-                <asp:ListItem>OTHER</asp:ListItem>
-            </asp:DropDownList></td></tr>
-        <tr><td class="searchPara"><asp:Label ID="lblOfficePhone" runat="server" Text="Office Phone:"></asp:Label><asp:TextBox ID="txtOfficePhone" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblWorkEmail" runat="server" Text="Work Email:"></asp:Label><asp:TextBox ID="txtWorkEmail" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblPosition" runat="server" Text="Position:"></asp:Label><asp:TextBox ID="txtPosition" runat="server"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblSpecialty" runat="server" Text="Specialty:"></asp:Label><asp:TextBox ID="txtSpecialty" runat="server"></asp:TextBox></td>
+            
+
         <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" /></td></tr>
         <tr>
             <td colspan="2">
-                    <asp:GridView ID="grdPhysician" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">
+                    <asp:GridView ID="grdPhysician" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                            <asp:TemplateField HeaderText="Customer ID" >  
-                                <HeaderTemplate>
-                                    <asp:CheckBox ID="cbSelectAll" runat="server"  /> &nbsp;
-                                    <asp:LinkButton ID="lbtnDelete" runat="server" OnCommand="Delete_Click" CommandName="lbtnDelete" CommandArgument='<%#Eval("Physician_ID") %>'>Delete</asp:LinkButton>
-                                </HeaderTemplate>          
-                                <ItemTemplate> 
-                                    <asp:CheckBox ID="chkPhyID" runat="server" AutoPostBack="false" /> 
-                                    <asp:Label ID="hidPhyID" runat="server" Text='<%#Eval("Physician_ID") %>' Visible="false"></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
 
                             <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
                             <asp:BoundField HeaderText="Gender" DataField="Gender" SortExpression="GENDER" />
                             <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone" SortExpression="Office_Phone" />
                             <asp:BoundField HeaderText="Work Email" DataField="Work_Email" SortExpression="Work_Email" />
-                            <asp:BoundField HeaderText="Position" DataField="Position" SortExpression="Position" />
-                            <asp:BoundField HeaderText="Specialty" DataField="Specialty" SortExpression="Specialty" />
+                            <asp:BoundField HeaderText="Speciality" DataField="Speciality" SortExpression="Speciality" />
 
-                            <asp:TemplateField HeaderText="">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbtnEdit" runat="server" OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" CommandArgument='<% # Eval("Physician_ID")%>'>Edit</asp:LinkButton>&nbsp;&nbsp;
-                                </ItemTemplate>
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval("Physician_ID")%>' OnCommand="Delete_Click" CommandName="btnDelete" ImageUrl="~/images/Delete.png" Height ="30"  Width ="30" CausesValidation="false"  />||
-                                    <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval("Physician_ID") %>' OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" ImageUrl="~/images/Edit.jpg" Height ="30"  Width ="30" CausesValidation="false" />        
-                                </ItemTemplate>
-                                <HeaderStyle HorizontalAlign="Left" />           
-                            </asp:TemplateField>    
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!

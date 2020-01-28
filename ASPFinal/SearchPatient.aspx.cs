@@ -30,7 +30,7 @@ namespace ASPFinal
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if ((txtPatientID.Text.Trim() != "") || (txtFName.Text.Trim() != "") || (txtMidInit.Text.Trim() != "") || (txtLName.Text.Trim() != "") || (ddlGender.Text.Trim() != ""))
+            if ((txtPatientID.Text.Trim() != "") || (txtFName.Text.Trim() != "") || (txtLName.Text.Trim() != ""))
             {
                 try
                 {
@@ -49,17 +49,11 @@ namespace ASPFinal
             PatientDataTier aDatatier = new PatientDataTier();
             ViewState["vpatid"] = txtPatientID.Text.Trim();
             ViewState["vfname"] = txtFName.Text.Trim();
-            ViewState["vmidinit"] = txtMidInit.Text.Trim();
             ViewState["vlname"] = txtLName.Text.Trim();
-            ViewState["vgender"] = ddlGender.Text.Trim();
-
 
             DataSet aDataSet = new DataSet();
             aDataSet = aDatatier.GetPatient(Convert.ToString(ViewState["vpatid"]), Convert.ToString(ViewState["vFname"]),
-                Convert.ToString(ViewState["vMidint"]), Convert.ToString(ViewState["vLname"]), Convert.ToString(ViewState["vGender"]),
-                Convert.ToString(ViewState["vStreet"]), Convert.ToString(ViewState["vCity"]), Convert.ToString(ViewState["vState"]),
-                Convert.ToDecimal(ViewState["vZip"]), Convert.ToDateTime(ViewState["vDob"]), Convert.ToString(ViewState["vHomePhone"]),
-                Convert.ToString(ViewState["vCellPhone"]), Convert.ToString(ViewState["vEmail"]));
+               Convert.ToString(ViewState["vLname"]));
 
             grdPatient.DataSource = aDataSet.Tables[0];
 
@@ -77,5 +71,6 @@ namespace ASPFinal
         {
             Response.Redirect("~/ViewPatients.aspx");
         }
+
     }
 }

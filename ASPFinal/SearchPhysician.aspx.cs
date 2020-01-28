@@ -30,7 +30,7 @@ namespace ASPFinal
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if ((txtPhysicianID.Text.Trim() != "") || (txtFName.Text.Trim() != "") || (txtLName.Text.Trim() != "") || (ddlGender.Text.Trim() != "") || (txtOfficePhone.Text.Trim() != "") || (txtWorkEmail.Text.Trim() != "") || (txtPosition.Text.Trim() != "") || (txtSpecialty.Text.Trim() != ""))
+            if ((txtPhysicianID.Text.Trim() != "") || (txtFName.Text.Trim() != "") || (txtLName.Text.Trim() != "") )
             {
                 try
                 {
@@ -49,25 +49,14 @@ namespace ASPFinal
             PhysicianDataTier aDatatier = new PhysicianDataTier();
             ViewState["vphyid"] = txtPhysicianID.Text.Trim();
             ViewState["vflame"] = txtFName.Text.Trim();
-            ViewState["vmidinit"] = txtMidint.Text.Trim();
+
             ViewState["vlname"] = txtLName.Text.Trim();
-            ViewState["vgender"] = ddlGender.Text.Trim();
-            ViewState["vofficephone"] = txtOfficePhone.Text.Trim();
-            ViewState["vworkemail"] = txtWorkEmail.Text.Trim();
-            ViewState["vposition"] = txtPosition.Text.Trim();
-            ViewState["vspeciality"] = txtSpecialty.Text.Trim();
+
 
 
             DataSet aDataSet = new DataSet();
             aDataSet = aDatatier.getphysician(Convert.ToString(ViewState["vphyid"]),
-                Convert.ToString(ViewState["vflame"]), Convert.ToString(ViewState["vmidinit"]),
-                Convert.ToString(ViewState["vlname"]), Convert.ToString(ViewState["vgender"]), 
-                Convert.ToString(ViewState["vofficephone"]), Convert.ToString(ViewState["vworkemail"]),
-                Convert.ToString(ViewState["vposition"]), Convert.ToString(ViewState["vspeciality"]),
-                Convert.ToString(ViewState["vdatetime"]), Convert.ToString(ViewState["vstreetname"]),
-                Convert.ToString(ViewState["vcity"]), Convert.ToString(ViewState["vdoc_state"]),
-                Convert.ToString(ViewState["vzip"]), Convert.ToString(ViewState["vpersonalphone"]),
-                Convert.ToString(ViewState["personalemail"]), Convert.ToString(ViewState["salary"]));
+                Convert.ToString(ViewState["vflame"]),Convert.ToString(ViewState["vlname"]));
 
             grdPhysician.DataSource = aDataSet.Tables[0];
 
