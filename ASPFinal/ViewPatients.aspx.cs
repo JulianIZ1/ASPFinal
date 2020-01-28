@@ -16,7 +16,7 @@ namespace ASPFinal
 
             if(!IsPostBack)
             {
-                LoadData();
+                DataBind();
             }
             else
             {
@@ -24,18 +24,23 @@ namespace ASPFinal
             }
         }
 
-        private void LoadData()
+        private void DataBind()
         {
+            PatientDataTier aDatatier = new PatientDataTier();
 
+            DataSet aDataSet = new DataSet();
+            aDataSet = aDatatier.ViewPatient("", "", "");
 
-            PatientDataTier dataTier = new PatientDataTier();
+            grdStudents.DataSource = aDataSet.Tables[0];
 
-            DataSet dataSet = new DataSet();
-
-            dataSet = dataTier.ViewPatient();
-            grdStudents.DataSource = dataSet.Tables[0];
+            // Cache for a while
+            if (Cache["CustomerData"] != null)
+            {
+                Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
+                    null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),
+                    System.Web.Caching.CacheItemPriority.Default, null);
+            }
             grdStudents.DataBind();
-
         }
 
 
