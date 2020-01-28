@@ -133,5 +133,43 @@ namespace ASPFinal
                 myConn.Close();
             }
         }
+
+        public DataSet DeletePhysician(string phyid)
+        {
+            try
+            {
+                //open connection
+                myConn.Open();
+                //Clear command argument
+                cmdString.Parameters.Clear();
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandText = connString;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Delete_Physician";
+
+                //define input parameters
+                cmdString.Parameters.Add("@Physician_id", SqlDbType.Int).Value = phyid;
+
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+
+                //filladapter
+                aAdapter.Fill(aDataSet);
+                //return data set
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
     }
 }

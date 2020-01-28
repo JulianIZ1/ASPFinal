@@ -17,7 +17,37 @@ namespace ASPFinal
 
         protected void Delete_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                CheckBox chk = new CheckBox();
+                Label lbl = new Label();
+                string precid = "";
+                PhysicianDataTier std = new PhysicianDataTier();
+
+                if (grdStudents.Rows.Count > 0)
+                {
+
+                    foreach (GridViewRow row in grdStudents.Rows)
+                    {
+                        chk = (CheckBox)row.FindControl("chkPhyID");
+
+                        if (chk.Checked)
+                        {
+                            lbl = (Label)row.Controls[0].FindControl("hidPhyID");
+                            precid = lbl.Text.Trim();
+
+                            std.DeletePhysician(precid);
+                        }
+
+                    }
+                    DataBind();
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         protected void lbtnEdit_Click(object sender, EventArgs e)
