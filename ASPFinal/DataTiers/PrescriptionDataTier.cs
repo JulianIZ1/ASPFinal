@@ -60,7 +60,7 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
-        public DataSet ViewPrescription(string phyid)
+        public DataSet ViewPrescription(string precid)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace ASPFinal.DataTiers
                 cmdString.CommandTimeout = 1500;
                 cmdString.CommandText = "Search_Prescription";  //name of stored procedure
                 //Define input parameters
-                cmdString.Parameters.Add("@PrescriptionID", SqlDbType.VarChar, 25).Value = phyid;
+                cmdString.Parameters.Add("@PrescriptionID", SqlDbType.VarChar, 25).Value = precid;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;
@@ -122,6 +122,43 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
 
+        }
+        public DataSet DeletePrescription(string precid)
+        {
+            try
+            {
+                //open connection
+                myConn.Open();
+                //Clear command argument
+                cmdString.Parameters.Clear();
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandText = connString;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Delete_Prescription";
+
+                //define input parameters
+                cmdString.Parameters.Add("@Prescription_id", SqlDbType.Int).Value = precid;
+
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+
+                //filladapter
+                aAdapter.Fill(aDataSet);
+                //return data set
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
         }
     }
 }

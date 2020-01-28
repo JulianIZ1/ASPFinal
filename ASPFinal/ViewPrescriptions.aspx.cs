@@ -13,19 +13,21 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataBind();
-        }
-        protected void Delete_Click(object sender, EventArgs e)
-        {
+            Page.ClientScript.RegisterClientScriptInclude("Test", "MyScript.js");
 
+            if (!IsPostBack)
+            {
+                DataBind();
+            }
+            else
+            {
+                // Do nothing 
+            }
         }
 
-        protected void lbtnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
         private void DataBind()
         {
+
             PrescriptionDataTier aDatatier = new PrescriptionDataTier();
 
             DataSet aDataSet = new DataSet();
@@ -41,6 +43,48 @@ namespace ASPFinal
                     System.Web.Caching.CacheItemPriority.Default, null);
             }
             grdStudents.DataBind();
+        }
+
+
+
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                CheckBox chk = new CheckBox();
+                Label lbl = new Label();
+                string precid = "";
+                PrescriptionDataTier std = new PrescriptionDataTier();
+
+                if (grdStudents.Rows.Count > 0)
+                {
+
+                    foreach (GridViewRow row in grdStudents.Rows)
+                    {
+                        chk = (CheckBox)row.FindControl("chkPreID");
+
+                        if (chk.Checked)
+                        {
+                            lbl = (Label)row.Controls[0].FindControl("hidPreID");
+                            patid = lbl.Text.Trim();
+
+                            std.DeletePrescription(precid);
+                        }
+
+                    }
+                    DataBind();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        protected void lbtnEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
