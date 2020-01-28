@@ -123,7 +123,7 @@ namespace ASPFinal
                 cmdString.Connection = myConn;
                 cmdString.CommandType = CommandType.StoredProcedure;
                 cmdString.CommandTimeout = 1500;
-                cmdString.CommandText = "SearchPhysician";  //name of stored procedure
+                cmdString.CommandText = "Search_Physician";  //name of stored procedure
                 //Define input parameters
                 cmdString.Parameters.Add("@physicianID", SqlDbType.VarChar, 25).Value = phyid;
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;         // order as in stored procedure
