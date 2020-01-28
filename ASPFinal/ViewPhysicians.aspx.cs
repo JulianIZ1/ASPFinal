@@ -22,7 +22,7 @@ namespace ASPFinal
 
                 CheckBox chk = new CheckBox();
                 Label lbl = new Label();
-                string precid = "";
+                string phyid = "";
                 PhysicianDataTier std = new PhysicianDataTier();
 
                 if (grdStudents.Rows.Count > 0)
@@ -35,9 +35,9 @@ namespace ASPFinal
                         if (chk.Checked)
                         {
                             lbl = (Label)row.Controls[0].FindControl("hidPhyID");
-                            precid = lbl.Text.Trim();
+                            phyid = lbl.Text.Trim();
 
-                            std.DeletePhysician(precid);
+                            std.DeletePhysician(phyid);
                         }
 
                     }
