@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace ASPFinal
 {
@@ -24,5 +25,23 @@ namespace ASPFinal
 
         }
 
+        private void DataBind()
+        {
+            PatientDataTier aDatatier = new PatientDataTier();
+
+            DataSet aDataSet = new DataSet();
+            aDataSet = aDatatier.ViewPhysician("", "", "");
+
+            grdStudents.DataSource = aDataSet.Tables[0];
+
+            // Cache for a while
+            if (Cache["CustomerData"] != null)
+            {
+                Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
+                    null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),
+                    System.Web.Caching.CacheItemPriority.Default, null);
+            }
+            grdStudents.DataBind();
+        }
     }
 }

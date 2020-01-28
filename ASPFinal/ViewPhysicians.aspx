@@ -63,17 +63,15 @@
                             <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
                             <asp:BoundField HeaderText="Gender" DataField="Gender" SortExpression="GENDER" />
-                            <asp:BoundField DataField="STREET" HeaderText="Street" SortExpression="STREET" />
+                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
                             <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
-                            <asp:BoundField DataField="PHYSICIAN_STATE" HeaderText="State" SortExpression="PHYSICIAN_STATE" />
+                            <asp:BoundField DataField="DOC_STATE" HeaderText="State" SortExpression="PHYSICIAN_STATE" />
                             <asp:BoundField HeaderText="ZIP" DataField="ZIP" SortExpression="ZIP" />
                             <asp:BoundField HeaderText="Date of Birth" DataField="DOB" SortExpression="DOB" />
                             <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone" SortExpression="Office_Phone" />
                             <asp:BoundField HeaderText="Personal Phone" DataField="Personal_Phone" SortExpression="Personal_Phone" />                           
-                            <asp:BoundField HeaderText="Email" DataField="Email_I" SortExpression="Email_I" />
-                            <asp:BoundField HeaderText="Email" DataField="Email_II" SortExpression="Email_II" />
-                            <asp:BoundField HeaderText="Work Email" DataField="Work_Email" SortExpression="Work_Email" />
-                            <asp:BoundField HeaderText="Position" DataField="Position" SortExpression="Position" />
+                            <asp:BoundField HeaderText="Email" DataField="WORK_EMAIL" SortExpression="WORK_EMAIL" />
+                            <asp:BoundField HeaderText="Email" DataField="PERSONAL_EMAIL" SortExpression="PERSONAL_EMAIL" />
                             <asp:BoundField HeaderText="Specialty" DataField="Specialty" SortExpression="Specialty" />
                             <asp:BoundField HeaderText="Salary" DataField="Salary" SortExpression="Salary" />
 
