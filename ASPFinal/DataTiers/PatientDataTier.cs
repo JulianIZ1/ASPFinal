@@ -164,7 +164,7 @@ namespace ASPFinal
             }
         }
 
-        public void UpdatePatient(string patid, string fname, string midint, string lname, string gender,  DateTime dob, string street, string city,
+        public static void UpdatePatient(string patid, string fname, string midint, string lname, string gender, string street, string city,
             string state, decimal zip, string home, string cell, string email)
         {
             try
@@ -177,7 +177,7 @@ namespace ASPFinal
                 cmdString.CommandTimeout = 1500;
                 cmdString.CommandText = "Update_Paitent";   //name of the stored procedure
                 //Define input parameter
-                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;  //parameter must be same as in proc
+                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
                 cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 50).Value = fname;
                 cmdString.Parameters.Add("@midint", SqlDbType.Char, 1).Value = midint;
                 cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 50).Value = lname;
@@ -186,13 +186,13 @@ namespace ASPFinal
                 cmdString.Parameters.Add("@city", SqlDbType.VarChar, 60).Value = city;
                 cmdString.Parameters.Add("@pait_state", SqlDbType.Char, 2).Value = state;
                 cmdString.Parameters.Add("@zip", SqlDbType.Decimal).Value = zip;
-                cmdString.Parameters.Add("@dob", SqlDbType.DateTime2, 7).Value = dob;
                 cmdString.Parameters.Add("@home_phone", SqlDbType.NChar, 14).Value = home;
                 cmdString.Parameters.Add("@cell_phone", SqlDbType.NChar, 14).Value = cell;
                 cmdString.Parameters.Add("@email", SqlDbType.VarChar, 60).Value = email;
 
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;
+
                 //newProjectID = Int32.Parse(cmdString.ExecuteScalar().ToString()); --- not returning any values
                 cmdString.ExecuteNonQuery();
                 //  return newProjectID;    --- not returning any values
