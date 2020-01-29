@@ -68,9 +68,7 @@ namespace ASPFinal
             try
             {
 
-               /* Session[""] = ;
-                Session[""] = ;
-                Session[""] = ;*/
+               
 
                 recordToBeEdited = e.CommandArgument.ToString().Trim();
 

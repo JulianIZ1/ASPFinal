@@ -76,6 +76,9 @@ function SelectAll(id)
                             <asp:BoundField HeaderText="Email" DataField="Email" SortExpression="Email" />
 
 
+                             <asp:TemplateField></asp:TemplateField>
+
+
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!
