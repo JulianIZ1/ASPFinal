@@ -30,6 +30,7 @@ namespace ASPFinal
                     {
                         //Response.Redirect("~/ViewPatients.aspx");
                         lblPrescriptionID.Text = dataSet.Tables[0].Rows[0]["prescription_id"].ToString();
+                        
                         txtRXNum.Text = dataSet.Tables[0].Rows[0]["rx_number"].ToString();
                         txtMedicationName.Text = dataSet.Tables[0].Rows[0]["medication_name"].ToString();
                         txtRefillAmt.Text = dataSet.Tables[0].Rows[0]["refill_amt"].ToString();
@@ -47,5 +48,28 @@ namespace ASPFinal
         {
             Response.Redirect("~/ViewPrescriptions.aspx");
         }
+
+        protected void btnHidden_Click(object sender, EventArgs e)
+        {
+            string reply;
+            // Adds into SQL database
+            try
+            {
+                PrescriptionDataTier.UpdatePrescription(lblPrescriptionID.Text, txtRXNum.Text, txtMedicationName.Text, txtRefillAmt.Text, lblRefillDate.Text, txtDosage.Text,
+                    txtIntakeMethod.Text, txtFrequency.Text, txtPatID.Text, txtPhyID.Text);
+
+                reply = "Success";
+                lblDisplay.Text = reply;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
     }
 }

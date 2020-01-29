@@ -25,10 +25,6 @@ namespace ASPFinal
                 // Do nothing 
             }
 
-
-
-
-
         }
 
         private void DataBind()
