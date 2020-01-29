@@ -124,18 +124,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Email:</td>
-            <td>
-                <asp:TextBox ID="txtEmailII" style="width:90%;" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">Email:</td>
-            <td>
-                <asp:TextBox ID="txtEmailIII" style="width:90%;" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
             <td>               
             </td>
             <td>

@@ -79,16 +79,16 @@ namespace ASPFinal
 
             try
             {
-               recordToBeEdited = e.CommandArgument.ToString().Trim();
+                recordToBeEdited = e.CommandArgument.ToString().Trim();
 
                 StringBuilder sb = new StringBuilder();
                 sb.Append("<script language='JavaScript'>");
-                sb.Append("window.open('UpdatePatient.aspx?ID=" + recordToBeEdited + "' , 'UpdatePaitent',");
+                sb.Append("window.open('UpdatePatient.aspx?ID=" + recordToBeEdited + "' , 'UpdatePatient',");
                 sb.Append("'width=525, height=525, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
                 sb.Append("</script");
 
                 // Register script
-                ClientScript.RegisterClientScriptBlock(GetType(), "PopupScript", sb.ToString());
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
             }
             catch
             {
