@@ -21,8 +21,6 @@ namespace ASPFinal
                     DataSet dataSet = new DataSet();
                     string patid = Request.QueryString["ID"];
                     dataSet = dataTier.FindByID(patid);
-
-                 
                     if(Request.QueryString["ID"].Trim().ToUpper() == "EDIT")
                     {
                         

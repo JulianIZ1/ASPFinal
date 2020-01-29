@@ -13,7 +13,16 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataBind();
+            Page.ClientScript.RegisterClientScriptInclude("Test", "MyScript.js");
+
+            if (!IsPostBack)
+            {
+                DataBind();
+            }
+            else
+            {
+                // Do nothing 
+            }
         }
 
         protected void Delete_Click(object sender, EventArgs e)
