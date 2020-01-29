@@ -132,14 +132,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Position:</td>
-            <td>
-                <asp:TextBox ID="txtPosition" style="width:90%;" runat="server"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="A position is required." Text="A position is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtPosition" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style2">Specialty:</td>
             <td>
                 <asp:TextBox ID="txtSpecialty" style="width:90%;" runat="server"></asp:TextBox>
