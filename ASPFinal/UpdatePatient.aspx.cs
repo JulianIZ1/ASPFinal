@@ -61,7 +61,24 @@ namespace ASPFinal
 
         protected void btnHidden_Click(object sender, EventArgs e)
         {
-           
+            string reply;
+            // Adds into SQL database
+            try
+            {
+                PatientDataTier.UpdatePatient(lblPatientID.Text, txtFName.Text, txtMidInit.Text, txtLName.Text, ddlGender.Text, txtStreet.Text,
+                    txtCity.Text, ddlState.Text, decimal.Parse(txtZIP.Text), txtHomePhone.Text, txtCellPhone.Text, txtEmailI.Text);
+
+                reply = "Success";
+                lblDisplay.Text = reply;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+            finally
+            {
+
+            }
         }
     }
 }
