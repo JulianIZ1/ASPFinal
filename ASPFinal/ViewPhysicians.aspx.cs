@@ -12,7 +12,14 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataBind();
+            if (!IsPostBack)
+            {
+                DataBind();
+            }
+            else
+            {
+                // Do nothing 
+            }
         }
 
         protected void Delete_Click(object sender, EventArgs e)
