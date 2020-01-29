@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text;
 
 namespace ASPFinal
 {
@@ -12,6 +13,8 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.ClientScript.RegisterClientScriptInclude("Test", "MyScript.js");
+
             if (!IsPostBack)
             {
                 DataBind();
@@ -20,6 +23,7 @@ namespace ASPFinal
             {
                 // Do nothing 
             }
+  
         }
 
         protected void Delete_Click(object sender, EventArgs e)
@@ -57,8 +61,37 @@ namespace ASPFinal
             }
         }
 
-        protected void lbtnEdit_Click(object sender, EventArgs e)
+        public void lbtnEdit_Click(object sender, CommandEventArgs e)
         {
+            string recordToBeEdited;
+
+            try
+            {
+
+               /* Session[""] = ;
+                Session[""] = ;
+                Session[""] = ;*/
+
+                recordToBeEdited = e.CommandArgument.ToString().Trim();
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append("<script language='JavaScript'>");
+                sb.Append("window.open('UpdatePhysician.aspx?ID=" + recordToBeEdited + "' , 'UpdatePhysician',");
+                sb.Append("'width=525, height=525, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
+                sb.Append("</script");
+
+                // Register script
+               Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
+
 
         }
 
