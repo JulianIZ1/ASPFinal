@@ -24,6 +24,24 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.Label lblPrescriptionID;
 
         /// <summary>
+        /// txtRXNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRXNum;
+
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+
+        /// <summary>
         /// txtMedicationName control.
         /// </summary>
         /// <remarks>
@@ -123,13 +141,13 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// txtPatID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtPatID;
 
         /// <summary>
         /// lblPatID control.
@@ -141,13 +159,13 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.Label lblPatID;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// txtPhyID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.TextBox txtPhyID;
 
         /// <summary>
         /// lblPhyID control.

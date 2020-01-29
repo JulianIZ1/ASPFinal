@@ -62,7 +62,7 @@ namespace ASPFinal.DataTiers
         }
 
 
-        public static void UpdatePrescription(string rxnum, string medic, decimal amt, DateTime refill_date, string dosage, string intake,
+        public static void UpdatePrescription(string precid, string rxnum, string medic, decimal amt, DateTime refill_date, string dosage, string intake,
                                         string freq, int patid, int phyid)
         {
             try
@@ -80,6 +80,7 @@ namespace ASPFinal.DataTiers
                 cmdString.CommandText = "Update_Prescription";
 
                 // Parameters
+                cmdString.Parameters.Add("@prescription_id", SqlDbType.VarChar, 25).Value = precid;
                 cmdString.Parameters.Add("@rx_number", SqlDbType.Char, 3).Value = rxnum;
                 cmdString.Parameters.Add("@medication_name", SqlDbType.VarChar, 50).Value = medic;
                 cmdString.Parameters.Add("@refill_amt", SqlDbType.Decimal).Value = amt;
@@ -169,6 +170,40 @@ namespace ASPFinal.DataTiers
             }
 
         }
+
+        public DataSet GetPrescriptionByID(string precid)
+        {
+            try
+            {
+                myConn.Open();   //open connection
+                cmdString.Parameters.Clear();      //clear command argument
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "GetPrescriptionByID";  //name of stored procedure
+                //Define input parameter
+                cmdString.Parameters.Add("@prescriptionID", SqlDbType.VarChar, 25).Value = precid;    //parameter names must match and in same
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+                // fill adapater
+                aAdapter.Fill(aDataSet);
+                //return dataSet
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+
+        }
+
         public DataSet DeletePrescription(string precid)
         {
             try

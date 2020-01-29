@@ -33,6 +33,14 @@
                 <asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID"></asp:Label>
             </td>
         </tr>
+         <tr>
+            <td class="auto-style2">RX Number:</td>
+            <td>
+                <asp:TextBox ID="txtRXNum" style="width:90%;" runat="server"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtIntakeMethod" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
         <tr>
             <td class="auto-style2">Medication Name:</td>
             <td>
@@ -82,16 +90,16 @@
        <tr>
             <td class="auto-style2">*Patient ID:</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" style="width:80%;" runat="server"></asp:DropDownList>
                 <br />               
+                <asp:TextBox ID="txtPatID" style="width:90%;" runat="server"></asp:TextBox>
                 <asp:Label ID="lblPatID" runat="server" Text=""></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">*Physician ID:</td>
             <td>
-                <asp:DropDownList ID="DropDownList2" style="width:80%;" runat="server"></asp:DropDownList>
                 <br />
+                <asp:TextBox ID="txtPhyID" style="width:90%;" runat="server"></asp:TextBox>
                 <asp:Label ID="lblPhyID" runat="server" Text=""></asp:Label>                
             </td>
             
