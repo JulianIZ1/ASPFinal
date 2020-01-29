@@ -96,8 +96,38 @@ namespace ASPFinal
             {
                 myConn.Close(); 
             }
+        }
 
+        public DataSet FindByID(string patid)
+        {
+            try
+            {
+                myConn.Open();                                          // Open Connection Strings
+                cmdString.Parameters.Clear();                           // Clears all the parameters
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;    // Uses stored procedure
+                cmdString.CommandTimeout = 1500;                        // Timeout command
+                cmdString.CommandText = "GetPatientByID";                 // Uses this store procedure
 
+                // Defines the input parameters
+                cmdString.Parameters.Add("@patient_id", SqlDbType.VarChar, 25).Value = patid;
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+                // fill adapater
+                aAdapter.Fill(aDataSet);
+                //return dataSet
+                return aDataSet;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message, Ex.InnerException);
+            }
+            finally
+            {
+                myConn.Close();
+            }
         }
 
         public DataSet ViewPatient(string patid, string fname, string lname)
