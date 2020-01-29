@@ -13,7 +13,17 @@ namespace ASPFinal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataBind();
+            Page.ClientScript.RegisterClientScriptInclude("Test", "MyScript.js");
+
+            if (!IsPostBack)
+            {
+                DataBind();
+            }
+            else
+            {
+                // Do nothing 
+            }
+  
         }
 
         protected void Delete_Click(object sender, EventArgs e)
@@ -57,6 +67,11 @@ namespace ASPFinal
 
             try
             {
+
+               /* Session[""] = ;
+                Session[""] = ;
+                Session[""] = ;*/
+
                 recordToBeEdited = e.CommandArgument.ToString().Trim();
 
                 StringBuilder sb = new StringBuilder();
@@ -66,7 +81,7 @@ namespace ASPFinal
                 sb.Append("</script");
 
                 // Register script
-                ClientScript.RegisterClientScriptBlock(GetType(), "PopupScript", sb.ToString());
+               Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
             }
             catch
             {
@@ -76,6 +91,8 @@ namespace ASPFinal
             {
 
             }
+
+
         }
 
         private void DataBind()
