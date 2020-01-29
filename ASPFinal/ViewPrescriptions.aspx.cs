@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using ASPFinal.DataTiers;
+using System.Text;
 
 namespace ASPFinal
 {
@@ -82,9 +83,31 @@ namespace ASPFinal
             }
         }
 
-        protected void lbtnEdit_Click(object sender, EventArgs e)
+        public void lbtnEdit_Click(object sender, CommandEventArgs e)
         {
+            string recordToBeEdited;
 
+            try
+            {
+                recordToBeEdited = e.CommandArgument.ToString().Trim();
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append("<script language='JavaScript'>");
+                sb.Append("window.open('UpdatePrescription.aspx?ID=" + recordToBeEdited + "' , 'UpdatePrescription',");
+                sb.Append("'width=525, height=525, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
+                sb.Append("</script");
+
+                // Register script
+                ClientScript.RegisterClientScriptBlock(GetType(), "PopupScript", sb.ToString());
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
         }
     }
 }
