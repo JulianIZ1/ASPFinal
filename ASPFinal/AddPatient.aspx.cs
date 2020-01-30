@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -28,26 +29,37 @@ namespace ASPFinal
 
         protected void btnHidden_Click(object sender, EventArgs e)
         {
-            string reply;
-            // Adds into SQL database
             try
             {
-                PatientDataTier.AddPatient(txtFName.Text, txtMidInit.Text, txtLName.Text, ddlGender.Text, txtStreet.Text,
-                    txtCity.Text, ddlState.Text, decimal.Parse(txtZIP.Text), DateTime.Parse(txtDOB.Text), txtHomePhone.Text,
-                    txtCellPhone.Text, txtEmailI.Text);
-                
-                reply = "Success";
-                lblDisplay.Text = reply;
+                string reply;
+                // Adds into SQL database
+                try
+                {
+                    PatientDataTier.AddPatient(txtFName.Text, txtMidInit.Text, txtLName.Text, ddlGender.Text, txtStreet.Text,
+                        txtCity.Text, ddlState.Text, decimal.Parse(txtZIP.Text), DateTime.Parse(txtDOB.Text), txtHomePhone.Text,
+                        txtCellPhone.Text, txtEmailI.Text);
+
+                    reply = "Success";
+                    lblDisplay.Text = reply;
+                }
+                catch (Exception Ex)
+                {
+                    throw new Exception(Ex.Message);
+                }
+                finally
+                {
+
+                }
             }
             catch(Exception Ex)
             {
-                throw new Exception(Ex.Message);
+
             }
             finally
             {
-                
+
             }
-        }
+         }
 
         protected void btnClose_Click(object sender, EventArgs e)
         {

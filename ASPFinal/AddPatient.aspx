@@ -38,6 +38,7 @@
                 <asp:TextBox ID="txtFName" style="width:90%;" runat="server" ToolTip="Enter First Name Here"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A first name is required." Text="A first name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtFName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+               
             </td>
         </tr>
         <tr>
