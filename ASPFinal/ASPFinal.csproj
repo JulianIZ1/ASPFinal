@@ -127,6 +127,7 @@
     <Content Include="SearchPrescription.aspx" />
     <Content Include="State.xml" />
     <Content Include="StyleSheet.css" />
+    <Content Include="Umbrella.jpg" />
     <Content Include="UpdatePatient.aspx" />
     <Content Include="UpdatePhysician.aspx" />
     <Content Include="UpdatePrecription.aspx" />

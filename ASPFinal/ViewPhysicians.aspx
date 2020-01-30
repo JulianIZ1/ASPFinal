@@ -29,7 +29,7 @@
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
     <div class="navbar verticalCenter" align="right" style="background-color:black">
-            <img src="Images/logo2.png" class="logo"/>
+            <img src="Images/logo2.jpg" class="logo"/>
             <a href="Dashboard.aspx">Dashboard</a>
             <a href="ViewPrescriptions.aspx">Prescriptions</a>
             <a href="" class="active">Doctors</a>
@@ -41,11 +41,11 @@
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>     
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPhysician" OnCommand="NewPhysician" CommandName="NewPhysician" runat="server" NavigateUrl="~/AddPhysician.aspx">Add a Record</asp:HyperLink></td>
-                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPhysician" OnCommand="SearchPhysician" CommandName="SearchPhysician" runat="server" NavigateUrl="~/SearchPhysician.aspx">Search Records</asp:HyperLink></td></tr>
+            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPhysician" OnCommand="NewPhysician" CommandName="NewPhysician" runat="server" NavigateUrl="~/AddPhysician.aspx" ToolTip="Click Here to Add a Record">Add a Record</asp:HyperLink></td>
+                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPhysician" OnCommand="SearchPhysician" CommandName="SearchPhysician" runat="server" NavigateUrl="~/SearchPhysician.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td></tr>
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5">
+                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5" ToolTip="Click Here to Go to the Last Page">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Bottom"  />
                         <Columns>
                             <asp:TemplateField HeaderText="Customer ID" >  

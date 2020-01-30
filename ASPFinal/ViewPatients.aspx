@@ -34,7 +34,7 @@ function SelectAll(id)
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
     <div class="navbar verticalCenter" align="right" style="background-color:black">
-            <img src="Images/logo2.png" class="logo"/>
+            <img src="Images/logo2.jpg" class="logo"/>
             <a href="Dashboard.aspx">Dashboard</a>
             <a href="ViewPrescriptions.aspx">Prescriptions</a>
             <a href="ViewPhysicians.aspx">Doctors</a>
@@ -46,11 +46,11 @@ function SelectAll(id)
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>     
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPatient" OnCommand="NewPatient" CommandName="NewPatient" runat="server" NavigateUrl="~/AddPatient.aspx">Add a Record</asp:HyperLink></td>
-                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPatient" OnCommand="SearchPatient" CommandName="SearchPatient" runat="server" NavigateUrl="~/SearchPatient.aspx">Search Records</asp:HyperLink></td></tr>
+            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPatient" OnCommand="NewPatient" CommandName="NewPatient" runat="server" NavigateUrl="~/AddPatient.aspx" ToolTip="Click Here to Add a Record">Add a Record</asp:HyperLink></td>
+                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPatient" OnCommand="SearchPatient" CommandName="SearchPatient" runat="server" NavigateUrl="~/SearchPatient.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td></tr>
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5" OnSelectedIndexChanged="grdStudents_SelectedIndexChanged">
+                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5" OnSelectedIndexChanged="grdStudents_SelectedIndexChanged" ToolTip="Click Here to Go to the Last Page">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Bottom"  />
                         <Columns>
                             <asp:TemplateField HeaderText="Customer ID" >  

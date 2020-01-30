@@ -21,13 +21,13 @@
         <tr>
             <td class="auto-style2">Prescription ID:</td>
             <td>
-                <asp:DropDownList ID="ddlPrescriptionID" style="width:80%;" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlPrescriptionID" style="width:80%;" runat="server" ToolTip="Select Prescription ID"></asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Action:</td>
             <td>
-                <asp:DropDownList ID="ddlAction" style="width:80%;" runat="server">
+                <asp:DropDownList ID="ddlAction" style="width:80%;" runat="server" ToolTip="Select an Action">
                     <asp:ListItem>Add</asp:ListItem>
                     <asp:ListItem>Remove</asp:ListItem>
                 </asp:DropDownList>
@@ -36,7 +36,7 @@
         <tr>
             <td class="auto-style2">Amount:</td>
             <td>
-                <asp:TextBox ID="txtAmount" style="width:80%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtAmount" style="width:80%;" runat="server" ToolTip="Enter Amount"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -49,9 +49,9 @@
             <td>               
             </td>
             <td>
-                <asp:Button ID="btnUpdate" runat="server" Text="Update Record" ValidationGroup="firstGroup" OnClientClick="return Validate()" OnClick="btnUpdate_Click"/>
+                <asp:Button ID="btnUpdate" runat="server" Text="Update Record" ValidationGroup="firstGroup" OnClientClick="return Validate()" OnClick="btnUpdate_Click" ToolTip="Press to Update Record"/>
                 <asp:Button ID="btnHidden" runat="server" Text="" width="0" Height="0" />
-                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" />
+                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" />
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>
