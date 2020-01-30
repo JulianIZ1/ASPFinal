@@ -30,20 +30,23 @@
 
             </div>   
 
- <div class="title">
-			    About Us<br />
+<div class="title">
+                About Us<br />
                 <div class="missionStatement">
                     We strive to build a future in medicine that encourages friendliness, low costs, <br />excellent service, and customer satisfaction.
-                    <br />___________________________________________________________________________________<br /><br />
+                    <br />_________________________________________________________________________________<br /><br />
                     For the past 45 years, we at Umbrella Corp. have been dedicated to bringing the people <br />
                     of our community the highest quality and friendliest health care around. We are glad to help our community <br />
                     no matter what their financial status is, we will offer discounts depending on the household income  <br />
                     because we are passionate about the health of our community and doing everything we can to keep them healthy.  <br />
-                    ___________________________________________
+                    _______________________________________________________________ <br /><br />
+                    After many experiments, our results prove that we can make you feel better than you ever have before. <br />
+                    For any illness no matter how small make sure to come visit us and we that you will never feel the same.<br />
+                    ____________________________________________ <br /><br />
                 </div> 
 
- </div>	                   
-	    
+ </div>
+
          <div class="footer">&copy  Umbrella Corp. | (111)123-4567 | Arklay County, Raccoon City, Wyoming | UmbrellaCorp@Zipps.com</div>
         
     
