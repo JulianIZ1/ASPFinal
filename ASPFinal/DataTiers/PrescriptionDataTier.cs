@@ -237,5 +237,85 @@ namespace ASPFinal.DataTiers
                 myConn.Close();
             }
         }
+
+        public DataSet AddRefill(string precid, decimal radd, DateTime date)
+        {
+            try
+            {
+                //open connection
+                myConn.Open();
+                //Clear command argument
+                cmdString.Parameters.Clear();
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandText = connString;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Addition_Refill";
+
+                //define input parameters
+                cmdString.Parameters.Add("@Prescription_id", SqlDbType.VarChar, 25).Value = precid;
+                cmdString.Parameters.Add("@addition_amt", SqlDbType.Decimal).Value = radd;
+                cmdString.Parameters.Add("@refill_date", SqlDbType.DateTime2, 7).Value = date;
+
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+
+                //filladapter
+                aAdapter.Fill(aDataSet);
+                //return data set
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
+
+        public DataSet SubRefill(string precid, decimal radd, DateTime date)
+        {
+            try
+            {
+                //open connection
+                myConn.Open();
+                //Clear command argument
+                cmdString.Parameters.Clear();
+                //command
+                cmdString.Connection = myConn;
+                cmdString.CommandText = connString;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "Subtract_Refill";
+
+                //define input parameters
+                cmdString.Parameters.Add("@Prescription_id", SqlDbType.VarChar, 25).Value = precid;
+                cmdString.Parameters.Add("@subtract_amt", SqlDbType.Decimal).Value = radd;
+                cmdString.Parameters.Add("@refill_date", SqlDbType.DateTime2, 7).Value = date;
+
+                //adapter and dataset
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+
+                //filladapter
+                aAdapter.Fill(aDataSet);
+                //return data set
+                return aDataSet;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
     }
 }

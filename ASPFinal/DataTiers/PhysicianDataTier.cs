@@ -66,11 +66,6 @@ namespace ASPFinal
             }
         }
 
-        public static DataSet SubtractValue()
-        {
-
-        }
-
         public DataSet getphysician(string phyid, string fname,  string lname)
         {
             try

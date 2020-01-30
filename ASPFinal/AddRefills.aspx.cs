@@ -21,20 +21,23 @@ namespace ASPFinal
             string dt = DateTime.Now.ToString();
             lblRefillDate.Text = dt;
 
-            try
+            if(!IsPostBack)
             {
-                myConn.Open();
-                SqlCommand com = new SqlCommand("select * from prescription", myConn);
-                SqlDataAdapter sqlData = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                sqlData.Fill(ds);
-                ddlPrescriptionID.DataTextField = ds.Tables[0].Columns["prescription_id"].ToString();
-                ddlPrescriptionID.DataSource = ds.Tables[0];
-                ddlPrescriptionID.DataBind();
-            }
-            finally
-            {
-                myConn.Close();
+                try
+                {
+                    myConn.Open();
+                    SqlCommand com = new SqlCommand("select * from prescription", myConn);
+                    SqlDataAdapter sqlData = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    sqlData.Fill(ds);
+                    ddlPrescriptionID.DataTextField = ds.Tables[0].Columns["prescription_id"].ToString();
+                    ddlPrescriptionID.DataSource = ds.Tables[0];
+                    ddlPrescriptionID.DataBind();
+                }
+                finally
+                {
+                    myConn.Close();
+                }
             }
         }
 
@@ -48,13 +51,30 @@ namespace ASPFinal
             string choice = ddlAction.Text.ToString();
             if (choice == "Add")
             {
-                PrescriptionDataTier dataTier = new PrescriptionDataTier();
-                dataTier.SubstractValue();
+                if(txtAmount.Text.Trim() == "" || txtAmount.Text.ToString() == null)
+                {
+                    lblDisplay.Text = "Please input a value";
+                }
+                else
+                {
+                    lblDisplay.Text = "Success";
+                    PrescriptionDataTier dataTier = new PrescriptionDataTier();
+                    dataTier.AddRefill(ddlPrescriptionID.SelectedItem.ToString(), Convert.ToDecimal(txtAmount.Text), Convert.ToDateTime(lblRefillDate.Text.ToString()));
+                }
             }
             else
             {
-                lblDisplay.Text = "No u";
-             }
+                if (txtAmount.Text.Trim() == "" || txtAmount.Text.ToString() == null)
+                {
+                    lblDisplay.Text = "Please input a value";
+                }
+                else
+                {
+                    lblDisplay.Text = "Success";
+                    PrescriptionDataTier dataTier = new PrescriptionDataTier();
+                    dataTier.SubRefill(ddlPrescriptionID.SelectedItem.ToString(), Convert.ToDecimal(txtAmount.Text), Convert.ToDateTime(lblRefillDate.Text.ToString()));
+                }
+            }
         }
     }
 }
