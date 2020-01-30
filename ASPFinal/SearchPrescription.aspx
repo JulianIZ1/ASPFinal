@@ -47,9 +47,9 @@ function SelectAll(id)
     <br />
     <br />
     <table class="auto-style1">
-        <tr><td class="searchPara"><asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID:"></asp:Label><asp:TextBox ID="txtPrescriptionID" runat="server"></asp:TextBox></td>
+        <tr><td class="searchPara"><asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID:"></asp:Label><asp:TextBox ID="txtPrescriptionID" runat="server" ToolTip="Enter Prescription ID"></asp:TextBox></td>
         
-        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" /></td></tr>
+        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ToolTip="Press to Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" /></td></tr>
         <tr>
             <td colspan="2">
                     <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True">

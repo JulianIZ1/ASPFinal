@@ -36,7 +36,7 @@
          <tr>
             <td class="auto-style2">RX Number:</td>
             <td>
-                <asp:TextBox ID="txtRXNum" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtRXNum" style="width:90%;" runat="server" ToolTip="Enter RX Number"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtIntakeMethod" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -44,7 +44,7 @@
         <tr>
             <td class="auto-style2">Medication Name:</td>
             <td>
-                <asp:TextBox ID="txtMedicationName" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtMedicationName" style="width:90%;" runat="server" ToolTip="Enter Medication Name"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtMedicationName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -52,7 +52,7 @@
         <tr>
             <td class="auto-style2">Refill Amount:</td>
             <td>
-                <asp:TextBox ID="txtRefillAmt" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtRefillAmt" style="width:90%;" runat="server" ToolTip="Enter Refill Amount"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtRefillAmt" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -66,7 +66,7 @@
         <tr>
             <td class="auto-style2">Dosage:</td>
             <td>
-                <asp:TextBox ID="txtDosage" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDosage" style="width:90%;" runat="server" ToolTip="Enter Dosage"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtDosage" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -74,7 +74,7 @@
         <tr>
             <td class="auto-style2">Intake Method:</td>
             <td>
-                <asp:TextBox ID="txtIntakeMethod" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtIntakeMethod" style="width:90%;" runat="server" ToolTip="Enter Intake Method"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtIntakeMethod" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -82,7 +82,7 @@
         <tr>
             <td class="auto-style2">Frequency:</td>
             <td>
-                <asp:TextBox ID="txtFrequency" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtFrequency" style="width:90%;" runat="server" ToolTip="Enter Frequency"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Required." Text="Required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtFrequency" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -91,7 +91,7 @@
             <td class="auto-style2">*Patient ID:</td>
             <td>
                 <br />               
-                <asp:TextBox ID="txtPatID" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPatID" style="width:90%;" runat="server" ToolTip="Enter Patient ID"></asp:TextBox>
                 <asp:Label ID="lblPatID" runat="server" Text=""></asp:Label>
             </td>
         </tr>
@@ -99,7 +99,7 @@
             <td class="auto-style2">*Physician ID:</td>
             <td>
                 <br />
-                <asp:TextBox ID="txtPhyID" style="width:90%;" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPhyID" style="width:90%;" runat="server" ToolTip="Enter Physician ID"></asp:TextBox>
                 <asp:Label ID="lblPhyID" runat="server" Text=""></asp:Label>                
             </td>
             
@@ -108,9 +108,9 @@
             <td>               
             </td>
             <td>
-                <asp:Button ID="btnUpdate" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()"/>
-                <asp:Button ID="btnHidden" runat="server" Text="Update Record" OnClick="btnHidden_Click"/>
-                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()" ToolTip="Press to Verify Data"/>
+                <asp:Button ID="btnHidden" runat="server" Text="Update Record" OnClick="btnHidden_Click" ToolTip="Press to Update Record"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" />
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>

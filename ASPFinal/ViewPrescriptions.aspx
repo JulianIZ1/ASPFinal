@@ -46,13 +46,13 @@ function SelectAll(id)
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>     
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPrescription" OnCommand="NewPrescription" CommandName="NewPrescription" runat="server" NavigateUrl="~/AddPrescription.aspx">Add a Record</asp:HyperLink></td>
-                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPrescriptions" OnCommand="SearchPrescriptions" CommandName="SearchPrescriptions" runat="server" NavigateUrl="~/SearchPrescription.aspx">Search Records</asp:HyperLink></td>
-                <td><asp:HyperLink ID="HyperLink3" onclick="AddRefills" OnCommand="AddRefills" CommandName="AddRefills" runat="server" NavigateUrl="~/AddRefills.aspx">Add/Drop Refills</asp:HyperLink></td>
+            <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPrescription" OnCommand="NewPrescription" CommandName="NewPrescription" runat="server" NavigateUrl="~/AddPrescription.aspx" ToolTip="Click Here to Add a Record">Add a Record</asp:HyperLink></td>
+                <td><asp:HyperLink ID="HyperLink2" onclick="SearchPrescriptions" OnCommand="SearchPrescriptions" CommandName="SearchPrescriptions" runat="server" NavigateUrl="~/SearchPrescription.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td>
+                <td><asp:HyperLink ID="HyperLink3" onclick="AddRefills" OnCommand="AddRefills" CommandName="AddRefills" runat="server" NavigateUrl="~/AddRefills.aspx" ToolTip="Click Here to Add or Drop Refills">Add/Drop Refills</asp:HyperLink></td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5">
+                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5" ToolTip="Click Here to Go to the Last Page">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Bottom"  />
                         <Columns>
                             <asp:TemplateField HeaderText="Customer ID" >  
