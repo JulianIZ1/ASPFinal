@@ -20,7 +20,7 @@
     <link href="StyleSheet.css" rel="stylesheet" />
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true"></asp:ScriptManager>
             <div class="navbar verticalCenter" align="right" style="background-color:black">
-                <img src="Images/Logo2.png" class="logo" />
+                <img src="Images/Logo2.jpg" class="logo" />
                 <a href="Home.html">Home</a>
                 <a href="">Company</a>
                 <a href=""class="active">About</a>
@@ -33,11 +33,12 @@
 <div class="title">
                 About Us<br />
                 <div class="missionStatement">
-                    We strive to build a future in medicine that encourages friendliness, low costs, <br />excellent service, and customer satisfaction.
-                    <br />_________________________________________________________________________________<br /><br />
+                    We strive to build a future in medicine that encourages friendliness, low costs, <br />
+                    excellent service, and customer satisfaction. <br />
+                    _________________________________________________________________________________<br /><br />
                     For the past 45 years, we at Umbrella Corp. have been dedicated to bringing the people <br />
                     of our community the highest quality and friendliest health care around. We are glad to help our community <br />
-                    no matter what their financial status is, we will offer discounts depending on the household income  <br />
+                    no matter what their financial status is. We will offer discounts depending on the household income  <br />
                     because we are passionate about the health of our community and doing everything we can to keep them healthy.  <br />
                     _______________________________________________________________ <br /><br />
                     After many experiments, our results prove that we can make you feel better than you ever have before. <br />
