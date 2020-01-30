@@ -15,8 +15,6 @@ namespace ASPFinal.DataTiers
         static SqlConnection myConn = new SqlConnection(connString);
         static System.Data.SqlClient.SqlCommand cmdString = new System.Data.SqlClient.SqlCommand();
 
-        public static object DropDownList1 { get; private set; }
-
         public static DataSet AddPrescription(string rxnum, string medic, decimal amt, DateTime refill_date, string dosage, string intake, 
                                                 string freq, int patid, int phyid)
         {
@@ -61,9 +59,8 @@ namespace ASPFinal.DataTiers
             }
         }
 
-
         public static void UpdatePrescription(string precid, string rxnum, string medic, decimal amt, DateTime refill_date, string dosage, string intake,
-                                        string freq, int patid, int phyid)
+                                        string freq, int phyid)
         {
             try
             {
@@ -88,7 +85,6 @@ namespace ASPFinal.DataTiers
                 cmdString.Parameters.Add("@dosage", SqlDbType.Char, 3).Value = dosage;
                 cmdString.Parameters.Add("@intake_method", SqlDbType.VarChar, 250).Value = intake;
                 cmdString.Parameters.Add("@frequency", SqlDbType.VarChar, 50).Value = freq;
-                cmdString.Parameters.Add("@patient_id", SqlDbType.Int).Value = patid;
                 cmdString.Parameters.Add("@physician_id", SqlDbType.Int).Value = phyid;
 
                 // Adapter and Dataset

@@ -55,8 +55,8 @@ namespace ASPFinal
             // Adds into SQL database
             try
             {
-                PrescriptionDataTier.UpdatePrescription(lblPrescriptionID.Text, txtRXNum.Text, txtMedicationName.Text, txtRefillAmt.Text, lblRefillDate.Text, txtDosage.Text,
-                    txtIntakeMethod.Text, txtFrequency.Text, txtPatID.Text, txtPhyID.Text);
+                PrescriptionDataTier.UpdatePrescription(lblPrescriptionID.Text, txtRXNum.Text, txtMedicationName.Text, Convert.ToDecimal(txtRefillAmt.Text), Convert.ToDateTime(lblRefillDate.Text), txtDosage.Text,
+                    txtIntakeMethod.Text, txtFrequency.Text, Convert.ToInt32(txtPhyID.Text));
 
                 reply = "Success";
                 lblDisplay.Text = reply;
