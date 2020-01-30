@@ -58,6 +58,8 @@
                     <asp:ListItem>MALE</asp:ListItem>
                     <asp:ListItem>FEMALE</asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="the gender is required." Text="The gender is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="ddlGender" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+
             </td>
         </tr>
         <tr>
