@@ -59,21 +59,21 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="MIDINT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField HeaderText="Gender" DataField="Gender" SortExpression="GENDER" />
-                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
-                            <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
-                            <asp:BoundField DataField="DOC_STATE" HeaderText="State" SortExpression="PHYSICIAN_STATE" />
-                            <asp:BoundField HeaderText="ZIP" DataField="ZIP" SortExpression="ZIP" />
-                            <asp:BoundField HeaderText="Date of Birth" DataField="DOB" SortExpression="DOB" />
-                            <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone" SortExpression="Office_Phone" />
-                            <asp:BoundField HeaderText="Personal Phone" DataField="Personal_Phone" SortExpression="Personal_Phone" />                           
-                            <asp:BoundField HeaderText="Email" DataField="WORK_EMAIL" SortExpression="WORK_EMAIL" />
-                            <asp:BoundField HeaderText="Email" DataField="PERSONAL_EMAIL" SortExpression="PERSONAL_EMAIL" />
-                            <asp:BoundField HeaderText="Speciality" DataField="Speciality" SortExpression="Speciality" />
-                            <asp:BoundField HeaderText="Salary" DataField="Salary" SortExpression="Salary" />
+                            <asp:BoundField DataField="FNAME" HeaderText="First Name" />
+                            <asp:BoundField DataField="MIDINT" HeaderText="Middle Initial" />
+                            <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
+                            <asp:BoundField HeaderText="Gender" DataField="Gender"  />
+                            <asp:BoundField DataField="STREETNAME" HeaderText="Street"  />
+                            <asp:BoundField DataField="CITY" HeaderText="City"  />
+                            <asp:BoundField DataField="DOC_STATE" HeaderText="State"  />
+                            <asp:BoundField HeaderText="ZIP" DataField="ZIP"  />
+                            <asp:BoundField HeaderText="Date of Birth" DataField="DOB" />
+                            <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone"  />
+                            <asp:BoundField HeaderText="Personal Phone" DataField="Personal_Phone"  />                           
+                            <asp:BoundField HeaderText="Email" DataField="WORK_EMAIL"  />
+                            <asp:BoundField HeaderText="Email" DataField="PERSONAL_EMAIL"  />
+                            <asp:BoundField HeaderText="Speciality" DataField="Speciality" />
+                            <asp:BoundField HeaderText="Salary" DataField="Salary" />
 
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>

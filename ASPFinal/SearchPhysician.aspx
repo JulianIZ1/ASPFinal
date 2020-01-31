@@ -60,12 +60,12 @@ function SelectAll(id)
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
 
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField HeaderText="Gender" DataField="Gender" SortExpression="GENDER" />
-                            <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone" SortExpression="Office_Phone" />
-                            <asp:BoundField HeaderText="Work Email" DataField="Work_Email" SortExpression="Work_Email" />
-                            <asp:BoundField HeaderText="Speciality" DataField="Speciality" SortExpression="Speciality" />
+                            <asp:BoundField DataField="FNAME" HeaderText="First Name"  />
+                            <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
+                            <asp:BoundField HeaderText="Gender" DataField="Gender"  />
+                            <asp:BoundField HeaderText="Office Phone" DataField="Office_Phone"  />
+                            <asp:BoundField HeaderText="Work Email" DataField="Work_Email"  />
+                            <asp:BoundField HeaderText="Speciality" DataField="Speciality"  />
 
                         </Columns>   
                         <EmptyDataTemplate>

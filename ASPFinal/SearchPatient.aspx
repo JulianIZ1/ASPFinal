@@ -61,19 +61,19 @@ function SelectAll(id)
                     <asp:GridView ID="grdPatient" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                             <asp:BoundField DataField="Patient_ID" HeaderText="Patient ID" SortExpression="patient_id" />
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="MIDINT" HeaderText="Middle Initial" SortExpression="MIDINT" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField HeaderText="GENDER" DataField="Gender" SortExpression="GENDER" />
-                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
-                            <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
-                            <asp:BoundField DataField="PAIT_STATE" HeaderText="State" SortExpression="PAIT_STATE" />
-                            <asp:BoundField HeaderText="ZIP" DataField="ZIP" SortExpression="ZIP" />
-                            <asp:BoundField HeaderText="Date of Birth" DataField="DOB" SortExpression="DOB" />
-                            <asp:BoundField HeaderText="Home Phone" DataField="Home_Phone" SortExpression="Home_Phone" />
-                            <asp:BoundField HeaderText="Cell Phone" DataField="Cell_Phone" SortExpression="Cell_Phone" />                           
-                            <asp:BoundField HeaderText="Email" DataField="Email" SortExpression="Email" />
+                             <asp:BoundField DataField="Patient_ID" HeaderText="Patient ID"  />
+                            <asp:BoundField DataField="FNAME" HeaderText="First Name"  />
+                            <asp:BoundField DataField="MIDINT" HeaderText="Middle Initial"  />
+                            <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
+                            <asp:BoundField HeaderText="GENDER" DataField="Gender"  />
+                            <asp:BoundField DataField="STREETNAME" HeaderText="Street"  />
+                            <asp:BoundField DataField="CITY" HeaderText="City"  />
+                            <asp:BoundField DataField="PAIT_STATE" HeaderText="State"  />
+                            <asp:BoundField HeaderText="ZIP" DataField="ZIP"  />
+                            <asp:BoundField HeaderText="Date of Birth" DataField="DOB"  />
+                            <asp:BoundField HeaderText="Home Phone" DataField="Home_Phone"  />
+                            <asp:BoundField HeaderText="Cell Phone" DataField="Cell_Phone"  />                           
+                            <asp:BoundField HeaderText="Email" DataField="Email"  />
 
 
                              <asp:TemplateField></asp:TemplateField>
