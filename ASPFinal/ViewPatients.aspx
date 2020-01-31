@@ -50,7 +50,7 @@ function SelectAll(id)
                 <td><asp:HyperLink ID="HyperLink2" onclick="SearchPatient" OnCommand="SearchPatient" CommandName="SearchPatient" runat="server" NavigateUrl="~/SearchPatient.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td></tr>
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="5" OnSelectedIndexChanged="grdStudents_SelectedIndexChanged" ToolTip="Click Here to Go to the Last Page">
+                    <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowSorting="True" PageSize="5" OnSelectedIndexChanged="grdStudents_SelectedIndexChanged" ToolTip="Click Here to Go to the Last Page">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Bottom"  />
                         <Columns>
                             <asp:TemplateField HeaderText="Customer ID" >  
@@ -65,12 +65,12 @@ function SelectAll(id)
                             </asp:TemplateField>
 
                             <asp:BoundField DataField="FNAME" HeaderText="First Name" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
-                            <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
-                            <asp:BoundField DataField="PAIT_STATE" HeaderText="State" SortExpression="PATIENT_STATE" />
-                            <asp:BoundField DataField="ZIP" HeaderText="ZIP"  SortExpression="ZIP"  />
-                            <asp:BoundField DataField="DOB" HeaderText="Date of Birth"  SortExpression="DOB" DataFormatString="{0:MM/dd/yyyy}"/>
+                            <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
+                            <asp:BoundField DataField="STREETNAME" HeaderText="Street" />
+                            <asp:BoundField DataField="CITY" HeaderText="City"  />
+                            <asp:BoundField DataField="PAIT_STATE" HeaderText="State" />
+                            <asp:BoundField DataField="ZIP" HeaderText="ZIP"   />
+                            <asp:BoundField DataField="DOB" HeaderText="Date of Birth" DataFormatString="{0:MM/dd/yyyy}"/>
 
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>
