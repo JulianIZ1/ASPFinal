@@ -32,7 +32,7 @@
         <tr>
             <td class="auto-style2">*First Name:</td>
             <td>
-                asp:TextBox ID="txtFName" stsyle="width:90%;" runat="server" ToolTip="Enter First Name Here"></asp:TextBox>
+                <asp:TextBox ID="txtFName" style="width:90%;" runat="server" ToolTip="Enter First Name Here"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A first name is required." Text="A first name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtFName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
@@ -43,7 +43,8 @@
                 <asp:TextBox ID="txtMidInit" style="width:90%;" runat="server" ToolTip="Enter Middle Initial Here"></asp:TextBox>
             </td>
         </tr>
-        <tr>           <td class="auto-style2">*Last Name:</td>
+        <tr>
+            <td class="auto-style2">*Last Name:</td>
             <td>
                 <asp:TextBox ID="txtLName" style="width:90%;" runat="server" ToolTip="Enter Last Name Here"></asp:TextBox>
                 <br />
@@ -57,7 +58,7 @@
                     <asp:ListItem>MALE</asp:ListItem>
                     <asp:ListItem>FEMALE</asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="the gender is required." Text="The gender is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="ddlGender" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="the gender is required." Text="The gender is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtLName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
 
             </td>
         </tr>
