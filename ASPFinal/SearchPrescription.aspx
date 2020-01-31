@@ -55,10 +55,10 @@ function SelectAll(id)
                     <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                            <asp:BoundField DataField="Prescription_ID" HeaderText="Prescription ID" SortExpression="Prescription_ID" />
-                            <asp:BoundField DataField="Medication_Name" HeaderText="Medication Name" SortExpression="Medication_Name" />
-                            <asp:BoundField HeaderText="Physician ID" DataField="Physician_ID" SortExpression="Physician_ID" />
-                            <asp:BoundField HeaderText="Patient ID" DataField="Patient_ID" SortExpression="Patient_ID" />
+                            <asp:BoundField DataField="Prescription_ID" HeaderText="Prescription ID"  />
+                            <asp:BoundField DataField="Medication_Name" HeaderText="Medication Name"  />
+                            <asp:BoundField HeaderText="Physician ID" DataField="Physician_ID"  />
+                            <asp:BoundField HeaderText="Patient ID" DataField="Patient_ID"  />
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!
