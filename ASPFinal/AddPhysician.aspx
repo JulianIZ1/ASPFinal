@@ -105,12 +105,16 @@
             <td class="auto-style2">Office Phone:</td>
             <td>
                 <asp:TextBox ID="txtOfficePhone" style="width:90%;" runat="server" ToolTip="Enter Office Phone"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtOfficePhone" runat="server" ErrorMessage="Please enter phone number as follows, (123)456-7890"
+                    ValidationExpression="^[\\(]{0,1}([0-9]){3}[\\)]{0,1}[ ]?([^0-1]){1}([0-9]){2}[ ]?[-]?[ ]?([0-9]){4}[ ]*((x){0,1}([0-9]){1,5}){0,1}$" ></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Personal Phone</td>
             <td>
                 <asp:TextBox ID="txtPersonalPhone" style="width:90%;" runat="server" ToolTip="Enter Personal Phone"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtPersonalPhone" runat="server" ErrorMessage="Please enter phone number as follows, (123)456-7890"
+                    ValidationExpression="^[\\(]{0,1}([0-9]){3}[\\)]{0,1}[ ]?([^0-1]){1}([0-9]){2}[ ]?[-]?[ ]?([0-9]){4}[ ]*((x){0,1}([0-9]){1,5}){0,1}$" ></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>

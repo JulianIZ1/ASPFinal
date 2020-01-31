@@ -121,6 +121,8 @@
             <td class="auto-style2">Cell Phone</td>
             <td>
                 <asp:TextBox ID="txtCellPhone" style="width:90%;" runat="server" ToolTip="Enter Cell Phone"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtCellPhone" runat="server" ErrorMessage="Please enter phone number as follows, (123)456-7890"
+                    ValidationExpression="^[\\(]{0,1}([0-9]){3}[\\)]{0,1}[ ]?([^0-1]){1}([0-9]){2}[ ]?[-]?[ ]?([0-9]){4}[ ]*((x){0,1}([0-9]){1,5}){0,1}$" ></asp:RegularExpressionValidator>
                 <br />
             </td>
         </tr>

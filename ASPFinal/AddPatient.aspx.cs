@@ -45,6 +45,9 @@ namespace ASPFinal
                 catch (Exception Ex)
                 {
                     throw new Exception(Ex.Message);
+
+
+
                 }
                 finally
                 {
