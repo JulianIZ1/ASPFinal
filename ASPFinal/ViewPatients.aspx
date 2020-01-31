@@ -64,7 +64,7 @@ function SelectAll(id)
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
+                            <asp:BoundField DataField="FNAME" HeaderText="First Name" />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
                             <asp:BoundField DataField="STREETNAME" HeaderText="Street" SortExpression="STREET" />
                             <asp:BoundField DataField="CITY" HeaderText="City" SortExpression="CITY" />
