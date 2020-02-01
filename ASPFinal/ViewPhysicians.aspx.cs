@@ -102,7 +102,7 @@ namespace ASPFinal
             grdStudents.DataSource = aDataSet.Tables[0];
 
             // Cache for a while
-            if (Cache["CustomerData"] != null)
+            if (Cache["StudentData"] != null)
             {
                 Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
                     null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),

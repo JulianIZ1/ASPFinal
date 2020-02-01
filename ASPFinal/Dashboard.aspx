@@ -26,12 +26,14 @@
         </div>        
         <div class="customerInfoDiv roundBorders">
             <div class="infoHeader">
-                Personal Information
+                WARNING!!  
             </div>
             <table class="customerInfoTable">
             <tr>
                 <td colspan="2">
-                                    
+                                    <p>Many patients experince death like behaviors, do not take with food or water.</p>
+                                    <p>Do not breath water, you are not a fish.</p>
+                                    <p>May cause large growth of brain</p>
                 </td>
             </tr>
         </table>
@@ -52,11 +54,11 @@
                     <asp:GridView ID="grdPhysicians" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="10">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                            <asp:BoundField DataField="FNAME" HeaderText="First Name" SortExpression="FNAME" />
-                            <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial" SortExpression="MIDINIT" />
-                            <asp:BoundField DataField="LNAME" HeaderText="Last Name" SortExpression="LNAME" />
-                            <asp:BoundField HeaderText="Position" DataField="Position" SortExpression="Position" />
-                            <asp:BoundField HeaderText="Specialty" DataField="Specialty" SortExpression="Specialty" />                          
+                            <asp:BoundField DataField="FNAME" HeaderText="First Name"  />
+                            <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial"  />
+                            <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
+                            <asp:BoundField HeaderText="Position" DataField="Position"  />
+                            <asp:BoundField HeaderText="Specialty" DataField="Specialty"  />                          
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!
@@ -70,18 +72,18 @@
             <tr>
                 <th>
                         <div class="auto-style1">
-                            Office Hours:
+                            Office Hours :
                                 </div>
-
-                         <p><font size="4">Monday - 9:00 Am to 9:00 Pm</font></p>
+                   
+                         <p><font size="4" color="White">Monday - 9:00 Am to 9:00 Pm</font></p>
                                                     <br />
-                         <p><font size="4">Tuesday - 9:00 Am to 9:00 Pm</font></p>
+                         <p><font size="4" color="White">Tuesday - 9:00 Am to 9:00 Pm</font></p>
                                                     <br />
-                         <p><font size="4">Wednesday - 9:00 Am to 9:00 Pm</font></p>
+                         <p><font size="4" color="White">Wednesday - 9:00 Am to 9:00 Pm</font></p>
                                                     <br />
-                         <p><font size="4">Thursday - 9:00 Am to 9:00 Pm</font></p>
+                         <p><font size="4" color="White">Thursday - 9:00 Am to 9:00 Pm</font></p>
                                                     <br />
-                         <p><font size="4">Friday - 9:00 Am to 6:30 Pm</font></p>
+                         <p><font size="4" color="White">Friday - 9:00 Am to 6:30 Pm</font></p>
                 </th>
             </tr>
         </table>
