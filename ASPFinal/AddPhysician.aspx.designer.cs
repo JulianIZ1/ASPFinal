@@ -231,6 +231,15 @@ namespace ASPFinal
         protected global::System.Web.UI.WebControls.TextBox txtOfficePhone;
 
         /// <summary>
+        /// RequiredFieldValidator11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator11;
+
+        /// <summary>
         /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
@@ -274,6 +283,15 @@ namespace ASPFinal
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtWorkEmail;
+
+        /// <summary>
+        /// RequiredFieldValidator12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator12;
 
         /// <summary>
         /// txtSpecialty control.

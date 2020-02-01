@@ -45,7 +45,7 @@
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A first name is required." Text="A first name is required." ControlToValidate="txtFName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ControlToValidate="txtFName" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -54,7 +54,7 @@
                 <asp:TextBox ID="txtMidInit" style="width:90%;" runat="server" ToolTip="Enter Middle Initial Here"></asp:TextBox>
                 <br />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ControlToValidate="txtMidInit" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="A last name is required." Text="A last name is required." ControlToValidate="txtLName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtLName" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
