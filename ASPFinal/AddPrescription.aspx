@@ -18,7 +18,8 @@
                 <asp:TextBox ID="txtRXNum" style="width:80%;" runat="server" ToolTip="Enter RX Number"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblRXNum" runat="server" Text=""></asp:Label>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtRXNum" runat="server" ErrorMessage="Names only contain letters"
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtRXNum" ErrorMessage="RX Number needs to be filled" ></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtRXNum" runat="server" ErrorMessage="RX Numbers are only numbers"
                    ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
             </td>
         </tr>

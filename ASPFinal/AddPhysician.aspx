@@ -34,9 +34,9 @@
             <td>
                 <asp:TextBox ID="txtFName" style="width:90%;" runat="server" ToolTip="Enter First Name Here"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A first name is required." Text="A first name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtFName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ControlToValidate="txtFName" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtFName"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ControlToValidate="txtFName" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
 
             </td>
         </tr>
@@ -46,7 +46,7 @@
                 <asp:TextBox ID="txtMidInit" style="width:90%;" runat="server" ToolTip="Enter Middle Initial Here"></asp:TextBox>
             <br />
                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ControlToValidate="txtMidInit" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
 
             </td>
         </tr>
@@ -55,9 +55,9 @@
             <td>
                 <asp:TextBox ID="txtLName" style="width:90%;" runat="server" ToolTip="Enter Last Name Here"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="A last name is required." Text="A last name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtLName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtLName"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtLName" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+                   ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
 
             </td>
         </tr>
@@ -68,8 +68,7 @@
                     <asp:ListItem>MALE</asp:ListItem>
                     <asp:ListItem>FEMALE</asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="the gender is required." Text="The gender is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtLName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="ddlGender"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -77,8 +76,6 @@
             <td>
                 <asp:TextBox ID="txtStreet" style="width:90%;" runat="server" ToolTip="Enter Street Address"></asp:TextBox>
               <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="A street address is required." Text="A street address is required." ControlToValidate="txtStreet" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-
-            
             </td>
         </tr>
         <tr>
@@ -113,7 +110,7 @@
             <td>
                 <asp:TextBox ID="txtDOB" style="width:90%;" runat="server" ToolTip="Enter Date of Birth"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please specify a DOB." Text="Please specify a DOB." ValidationExpression = "^[\s\S]{0,5}$" ControlToValidate="txtDOB" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter a date of birth" ControlToValidate="txtDOB"></asp:RequiredFieldValidator>
                 <asp:CompareValidator
                     id="dateValidator" runat="server" 
                     Type="Date"
@@ -129,6 +126,7 @@
             <td class="auto-style2">Office Phone:</td>
             <td>
                 <asp:TextBox ID="txtOfficePhone" style="width:90%;" runat="server" ToolTip="Enter Office Phone"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtOfficePhone"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtOfficePhone" runat="server" ErrorMessage="Please enter phone number as follows, (123)456-7890"
                     ValidationExpression="^[\\(]{0,1}([0-9]){3}[\\)]{0,1}[ ]?([^0-1]){1}([0-9]){2}[ ]?[-]?[ ]?([0-9]){4}[ ]*((x){0,1}([0-9]){1,5}){0,1}$" ></asp:RegularExpressionValidator>
             </td>
@@ -151,6 +149,7 @@
             <td class="auto-style2">Work Email:</td>
             <td>
                 <asp:TextBox ID="txtWorkEmail" style="width:90%;" runat="server" ToolTip="Enter Work Email"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtWorkEmail"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -158,7 +157,7 @@
             <td>
                 <asp:TextBox ID="txtSpecialty" style="width:90%;" runat="server" ToolTip="Enter Specialty"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="A specialty is required." Text="A specialty is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtSpecialty" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtSpeciality"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -166,7 +165,7 @@
             <td>
                 <asp:TextBox ID="txtSalary" style="width:90%;" runat="server" ToolTip="Enter Salary"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="A salary is required." Text="A salary is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtSalary" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtSalary"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
