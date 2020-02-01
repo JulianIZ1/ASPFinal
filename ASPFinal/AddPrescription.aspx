@@ -18,6 +18,8 @@
                 <asp:TextBox ID="txtRXNum" style="width:80%;" runat="server" ToolTip="Enter RX Number"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblRXNum" runat="server" Text=""></asp:Label>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtRXNum" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -26,6 +28,8 @@
                 <asp:TextBox ID="txtMedicationName" style="width:80%;" runat="server" ToolTip="Enter Medication Name"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblMedName" runat="server" Text=""></asp:Label>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="A Medication Nameis required." Text="Medication Name is required." ControlToValidate="txtMedicationName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+              
             </td>
         </tr>
         <tr>
@@ -34,6 +38,8 @@
                 <asp:TextBox ID="txtRefillAmount" style="width:80%;" runat="server" ToolTip="Enter Refill Amount"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblRefillAmt" runat="server" Text=""></asp:Label>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtRefillAmount" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -50,6 +56,9 @@
                 <asp:TextBox ID="txtDosage" style="width:80%;" runat="server" ToolTip="Enter Dosage"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblDosage" runat="server" Text=""></asp:Label>
+                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtDosage" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
+
             </td>
         </tr>
         <tr>
@@ -58,6 +67,8 @@
                 <asp:TextBox ID="txtIntakeMethod" style="width:80%;" runat="server" ToolTip="Enter Intake Method"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblIntakeMethod" runat="server" Text=""></asp:Label>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A Intake Method is required." Text="Intake Method is required." ControlToValidate="txtIntakeMethod" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+              
             </td>
         </tr>
         <tr>
@@ -66,6 +77,9 @@
                 <asp:TextBox ID="txtFrequency" style="width:80%;" runat="server" ToolTip="Enter Frequency"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblFrequency" runat="server" Text=""></asp:Label>
+                               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="A Frequency is required." Text="Frequency is required." ControlToValidate="txtFrequency" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+              
+
             </td>
         </tr>
         <tr>
@@ -74,6 +88,8 @@
                 <asp:TextBox ID="txtPatID" runat="server" ToolTip="Enter Patient ID"></asp:TextBox>
                 <br />               
                 <asp:Label ID="lblPatID" runat="server" Text=""></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Patient ID is required." Text="Patient ID is required." ControlToValidate="txtPatID" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+              
             </td>
         </tr>
         <tr>
@@ -81,7 +97,9 @@
             <td>
                 <asp:TextBox ID="txtPhysID" runat="server" ToolTip="Enter Physician ID"></asp:TextBox>
                 <br />
-                <asp:Label ID="lblPhyID" runat="server" ToolTip="Enter Physician ID"></asp:Label>                
+                <asp:Label ID="lblPhyID" runat="server" ToolTip="Enter Physician ID"></asp:Label> 
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="A Physician ID is required." Text=" Physician ID is required." ControlToValidate="txtPhysID" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+              
             </td>
             
         </tr>

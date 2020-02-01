@@ -35,12 +35,19 @@
                 <asp:TextBox ID="txtFName" style="width:90%;" runat="server" ToolTip="Enter First Name Here"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="A first name is required." Text="A first name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtFName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ControlToValidate="txtFName" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Middle Initial:</td>
             <td>
                 <asp:TextBox ID="txtMidInit" style="width:90%;" runat="server" ToolTip="Enter Middle Initial Here"></asp:TextBox>
+            <br />
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ControlToValidate="txtMidInit" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+
             </td>
         </tr>
         <tr>
@@ -49,6 +56,9 @@
                 <asp:TextBox ID="txtLName" style="width:90%;" runat="server" ToolTip="Enter Last Name Here"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="A last name is required." Text="A last name is required." ValidationExpression = "^[\s\S]{1,}$" ControlToValidate="txtLName" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtLName" runat="server" ErrorMessage="Names only contain letters"
+                   ValidationExpression="^[a-zA-Z]$"></asp:RegularExpressionValidator>
+
             </td>
         </tr>
         <tr>
@@ -66,25 +76,36 @@
             <td class="auto-style2">Street:</td>
             <td>
                 <asp:TextBox ID="txtStreet" style="width:90%;" runat="server" ToolTip="Enter Street Address"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="A street address is required." Text="A street address is required." ControlToValidate="txtStreet" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+
+            
             </td>
         </tr>
         <tr>
             <td class="auto-style2">City:</td>
             <td>
                 <asp:TextBox ID="txtCity" style="width:90%;" runat="server" ToolTip="Enter City Name"></asp:TextBox>
-            </td>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="A City is required." Text="A City is required." ControlToValidate="txtCity" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+
+                </td>
         </tr>
         <tr>
             <td class="auto-style2">State:</td>
             <td>
                 <asp:DropDownList ID="ddlState" style="width:90%;" runat="server" ToolTip="Select a State">
                 </asp:DropDownList>
-            </td>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="A state is required." Text="A state is required." ControlToValidate="ddlState" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+
+                </td>
         </tr>
         <tr>
             <td class="auto-style2">Zip:</td>
             <td>
                 <asp:TextBox ID="txtZIP" style="width:90%;" runat="server" ToolTip="Enter Zip Code"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="A zip is required." Text="A zip is required." ControlToValidate="txtCity" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtZIP" ErrorMessage="Zip codes only use numbers" ValidationExpression="^\d{5}$"></asp:RegularExpressionValidator>
+    
+                
             </td>           
         </tr>
         <tr>
@@ -99,7 +120,10 @@
                     Operator="DataTypeCheck"
                     ControlToValidate="txtDOB" 
                     ErrorMessage="Please enter a valid date." ValidationGroup="secondGroup"></asp:CompareValidator>
-            </td>
+                           <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Dates must be in this format: MM/DD/YYYY" ControlToValidate="txtDOB"
+                    ValidationExpression="^\d{1,2}\/\d{1,2}\/\d{4}$"></asp:RegularExpressionValidator>
+
+                </td>
         </tr>
         <tr>
             <td class="auto-style2">Office Phone:</td>

@@ -115,7 +115,7 @@
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="A state is required." Text="A state is required." ControlToValidate="ddlState" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
-            </td>
+            
         </tr>
         <tr>
             <td class="auto-style2">Zip:</td>
