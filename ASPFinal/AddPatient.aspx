@@ -15,7 +15,16 @@
             }                   
             return isValid;
         }
+}
     </script>
+<script type="text/javascript">
+    function Page_ValidationSummariesReset(){
+        if(typeof(Page_ValidationSummaries) == "undefined")
+            return;
+        for(var i = 0; i < Page_ValidationSummaries.length; i++)
+            Page_ValidationSummaries[i].style.display = "none';
+}
+</script>
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true"></asp:ScriptManager>
@@ -29,9 +38,6 @@
 
         </div>
     <table class="auto-style1" style="color:white; background-color:black">
-
-        <!-- First name     Middle Initial      Last name      Gender       DOB     Street      city        zip-->
-
         <tr>
             <td class="auto-style2">* First Name:</td>
             <td>
@@ -91,6 +97,7 @@
             <td>
                 <asp:TextBox ID="txtStreet" style="width:90%;" runat="server" ToolTip="Enter Street Address"></asp:TextBox>
                 <br />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="A street address is required." Text="A street address is required." ControlToValidate="txtStreet" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -98,6 +105,7 @@
             <td>
                 <asp:TextBox ID="txtCity" style="width:90%;" runat="server" ToolTip="Enter City Name"></asp:TextBox>
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="A City is required." Text="A City is required." ControlToValidate="txtCity" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -105,6 +113,8 @@
             <td>
                 <asp:DropDownList ID="ddlState" style="width:90%;" runat="server" ToolTip="Select a State"></asp:DropDownList>
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="A state is required." Text="A state is required." ControlToValidate="ddlState" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+            </td>
             </td>
         </tr>
         <tr>
@@ -112,9 +122,10 @@
             <td>
                 <asp:TextBox ID="txtZIP" style="width:90%;" runat="server" ToolTip="Enter Zip Code"></asp:TextBox>
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="A zip is required." Text="A zip is required." ControlToValidate="txtCity" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtZIP" ErrorMessage="Zip codes only use numbers" ValidationExpression="^\d{5}$"></asp:RegularExpressionValidator>
             </td>
         </tr>
-        <!--Add in stuff for social secuirty number-->
         <tr>
             <td class="auto-style2">Home Phone:</td>
             <td>
