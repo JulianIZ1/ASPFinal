@@ -122,9 +122,7 @@
             <td>
                 <asp:TextBox ID="txtZIP" style="width:90%;" runat="server" ToolTip="Enter Zip Code"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="A zip is required." Text="A zip is required." ControlToValidate="txtCity" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtZIP" ErrorMessage="Zip codes only use numbers" ValidationExpression="^\d{5}$"></asp:RegularExpressionValidator>
-            </td>
+           </td>
         </tr>
         <tr>
             <td class="auto-style2">Home Phone:</td>
