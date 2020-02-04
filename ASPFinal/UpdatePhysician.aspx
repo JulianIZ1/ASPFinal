@@ -15,7 +15,7 @@
             }
             return isValid;
         }
-        </script>
+    </script>
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
     <div class="navbar verticalCenter" align="right" style="background-color:black">
@@ -62,7 +62,6 @@
                 <asp:DropDownList ID="ddlGender" style="width:90%;" runat="server" ToolTip="Select Gender">
                     <asp:ListItem>MALE</asp:ListItem>
                     <asp:ListItem>FEMALE</asp:ListItem>
-                    <asp:ListItem>OTHER</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -159,7 +158,6 @@
         </tr>
         
     </table>
-    
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">

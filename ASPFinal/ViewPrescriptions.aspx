@@ -49,6 +49,11 @@ function SelectAll(id)
             <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPrescription" OnCommand="NewPrescription" CommandName="NewPrescription" runat="server" NavigateUrl="~/AddPrescription.aspx" ToolTip="Click Here to Add a Record">Add a Record</asp:HyperLink></td>
                 <td><asp:HyperLink ID="HyperLink2" onclick="SearchPrescriptions" OnCommand="SearchPrescriptions" CommandName="SearchPrescriptions" runat="server" NavigateUrl="~/SearchPrescription.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td>
                 <td><asp:HyperLink ID="HyperLink3" onclick="AddRefills" OnCommand="AddRefills" CommandName="AddRefills" runat="server" NavigateUrl="~/AddRefills.aspx" ToolTip="Click Here to Add or Drop Refills">Add/Drop Refills</asp:HyperLink></td>
+                <td>
+                    <div class="buttonContainer" style="clear:both;width:100%;text-align:left">
+                    <asp:Button ID="btn_Refresh" runat="server" Text="Refresh" OnClick="Refresh_Click" CssClass="simpleshape1"/>
+                   </div>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">

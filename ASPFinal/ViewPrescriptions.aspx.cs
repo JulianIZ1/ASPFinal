@@ -47,7 +47,10 @@ namespace ASPFinal
             grdStudents.DataBind();
         }
 
-
+        protected void Refresh_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
 
         protected void Delete_Click(object sender, EventArgs e)
         {

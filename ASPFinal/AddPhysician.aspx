@@ -158,6 +158,7 @@
                 <asp:TextBox ID="txtSpecialty" style="width:90%;" runat="server" ToolTip="Enter Specialty"></asp:TextBox>
                 <br />
                   <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtSpecialty"></asp:RequiredFieldValidator>
+
             </td>
         </tr>
         <tr>
@@ -174,9 +175,7 @@
             <td>
                 <asp:Button ID="btnAdd" runat="server" Text="Verify Data" ValidationGroup="firstGroup" AutoPostBack="false" OnClientClick="return Validate()" ToolTip="Press to Verify Data"/>
                 <asp:Button ID="btnHidden" runat="server" Text="Add Record" OnClick="btnHidden_Click" ToolTip="Press to Update Record"/>
-                
                 <asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" />
-
                 <asp:Label ID="lblDisplay" runat="server" />
             </td>
         </tr>

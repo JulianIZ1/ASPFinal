@@ -10,12 +10,16 @@ namespace ASPFinal
     public partial class AddPhysician : System.Web.UI.Page
     {
         // Global Varibales
-        string dt;
+        string dt, salFill;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
             dt = DateTime.Now.ToString("MM/dd/yyyy");
             txtDOB.Text = dt;
+
+            salFill = "20000";
+            txtSalary.Text = salFill;
 
             ddlState.DataSource = StateManager.getStates();
             ddlState.DataTextField = "FullAndAbbrev";
