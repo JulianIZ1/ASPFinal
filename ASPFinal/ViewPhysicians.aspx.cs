@@ -25,6 +25,11 @@ namespace ASPFinal
             }
         }
 
+        protected void Refresh_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
+
         protected void Delete_Click(object sender, EventArgs e)
         {
             try
@@ -66,9 +71,6 @@ namespace ASPFinal
 
             try
             {
-
-               
-
                 recordToBeEdited = e.CommandArgument.ToString().Trim();
 
                 StringBuilder sb = new StringBuilder();
@@ -102,7 +104,7 @@ namespace ASPFinal
             grdStudents.DataSource = aDataSet.Tables[0];
 
             // Cache for a while
-            if (Cache["CustomerData"] != null)
+            if (Cache["StudentData"] != null)
             {
                 Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
                     null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),
@@ -110,5 +112,6 @@ namespace ASPFinal
             }
             grdStudents.DataBind();
         }
+
     }
 }

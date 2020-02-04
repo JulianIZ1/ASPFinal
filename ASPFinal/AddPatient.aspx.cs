@@ -45,6 +45,9 @@ namespace ASPFinal
                 catch (Exception Ex)
                 {
                     throw new Exception(Ex.Message);
+
+
+
                 }
                 finally
                 {
@@ -65,5 +68,6 @@ namespace ASPFinal
         {
             Response.Redirect("~/ViewPatients.aspx");
         }
+
     }
 }

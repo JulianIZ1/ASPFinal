@@ -52,9 +52,10 @@ namespace ASPFinal
                 }
             }
         }
+
         protected void btnClose_Click(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(typeof(Page), "closePage", "window.close();", true);
+            this.ClientScript.RegisterClientScriptBlock(this.GetType(), "Close", "window.close()", true);
         }
 
         protected void btnHidden_Click(object sender, EventArgs e)

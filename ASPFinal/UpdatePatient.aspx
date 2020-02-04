@@ -62,7 +62,7 @@
                 <asp:DropDownList ID="ddlGender" style="width:90%;" runat="server" ToolTip="Select Gender">
                     <asp:ListItem>MALE</asp:ListItem>
                     <asp:ListItem>FEMALE</asp:ListItem>
-                    <asp:ListItem>OTHER</asp:ListItem>
+                    
                 </asp:DropDownList>
             </td>
         </tr>

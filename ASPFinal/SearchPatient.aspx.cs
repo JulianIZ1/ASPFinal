@@ -58,9 +58,9 @@ namespace ASPFinal
             grdPatient.DataSource = aDataSet.Tables[0];
 
             // Cache for a while
-            if (Cache["CustomerData"] != null)
+            if (Cache["PatientData"] == null)
             {
-                Cache.Add("StudentData", new DataView(aDataSet.Tables[0]),
+                Cache.Add("PatientData", new DataView(aDataSet.Tables[0]),
                     null, System.Web.Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10),
                     System.Web.Caching.CacheItemPriority.Default, null);
             }

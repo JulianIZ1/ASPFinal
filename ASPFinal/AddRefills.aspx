@@ -37,7 +37,9 @@
             <td class="auto-style2">Amount:</td>
             <td>
                 <asp:TextBox ID="txtAmount" style="width:80%;" runat="server" ToolTip="Enter Amount"></asp:TextBox>
-            </td>
+                               <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtAmount" runat="server" ErrorMessage="Refill amount can only be numbers"
+                   ValidationExpression="^[0-9]$"></asp:RegularExpressionValidator>
+                </td>
         </tr>
         <tr>
             <td class="auto-style2">Refill Date:</td>

@@ -49,6 +49,11 @@ function SelectAll(id)
             <tr><td><asp:HyperLink ID="HyperLink1" onclick="NewPrescription" OnCommand="NewPrescription" CommandName="NewPrescription" runat="server" NavigateUrl="~/AddPrescription.aspx" ToolTip="Click Here to Add a Record">Add a Record</asp:HyperLink></td>
                 <td><asp:HyperLink ID="HyperLink2" onclick="SearchPrescriptions" OnCommand="SearchPrescriptions" CommandName="SearchPrescriptions" runat="server" NavigateUrl="~/SearchPrescription.aspx" ToolTip="Click Here to Search Records">Search Records</asp:HyperLink></td>
                 <td><asp:HyperLink ID="HyperLink3" onclick="AddRefills" OnCommand="AddRefills" CommandName="AddRefills" runat="server" NavigateUrl="~/AddRefills.aspx" ToolTip="Click Here to Add or Drop Refills">Add/Drop Refills</asp:HyperLink></td>
+                <td>
+                    <div class="buttonContainer" style="clear:both;width:100%;text-align:left">
+                    <asp:Button ID="btn_Refresh" runat="server" Text="Refresh" OnClick="Refresh_Click" CssClass="simpleshape1"/>
+                   </div>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -66,16 +71,16 @@ function SelectAll(id)
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:BoundField DataField="PRESCRIPTION_ID" HeaderText="Prescription ID" SortExpression="PRESCRIPTION_ID" />
-                            <asp:BoundField DataField="RX_NUMBER" HeaderText="RX Number" SortExpression="RX_NUMBER" />
-                            <asp:BoundField DataField="MEDICATION_NAME" HeaderText="Medication Name" SortExpression="MEDICATION_NAME" />
-                            <asp:BoundField DataField="REFILL_AMT" HeaderText="Refill Amount" SortExpression="REFILL_AMT" />
-                            <asp:BoundField DataField="REFILL_DATE" HeaderText="Refill Date" SortExpression="REFILL_DATE" DataFormatString="{0:MM/dd/yyyy}"/>
-                            <asp:BoundField DataField="Dosage" HeaderText="Dosage"  SortExpression="DOSAGE" />
-                            <asp:BoundField DataField="INTAKE_METHOD" HeaderText="Intake Method" SortExpression="INTAKE_METHOD" />
-                            <asp:BoundField DataField="FREQUENCY" HeaderText="Frequency" SortExpression="FREQUENCY" />
-                            <asp:BoundField HeaderText="PATIENT ID" DataField="Patient_ID" SortExpression="PATIENT_ID" />
-                            <asp:BoundField DataField="PHYSICIAN_ID" HeaderText="Physician ID" SortExpression="PHYSICIAN_ID" />
+                            <asp:BoundField DataField="PRESCRIPTION_ID" HeaderText="Prescription ID"  />
+                            <asp:BoundField DataField="RX_NUMBER" HeaderText="RX Number"  />
+                            <asp:BoundField DataField="MEDICATION_NAME" HeaderText="Medication Name"  />
+                            <asp:BoundField DataField="REFILL_AMT" HeaderText="Refill Amount" />
+                            <asp:BoundField DataField="REFILL_DATE" HeaderText="Refill Date"  DataFormatString="{0:MM/dd/yyyy}"/>
+                            <asp:BoundField DataField="Dosage" HeaderText="Dosage"   />
+                            <asp:BoundField DataField="INTAKE_METHOD" HeaderText="Intake Method"  />
+                            <asp:BoundField DataField="FREQUENCY" HeaderText="Frequency" />
+                            <asp:BoundField HeaderText="PATIENT ID" DataField="Patient_ID"  />
+                            <asp:BoundField DataField="PHYSICIAN_ID" HeaderText="Physician ID"  />
                             
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>

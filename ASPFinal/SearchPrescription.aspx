@@ -47,18 +47,19 @@ function SelectAll(id)
     <br />
     <br />
     <table class="auto-style1">
-        <tr><td class="searchPara"><asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID:"></asp:Label><asp:TextBox ID="txtPrescriptionID" runat="server" ToolTip="Enter Prescription ID"></asp:TextBox></td>
-        
-        <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ToolTip="Press to Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" /></td></tr>
+        <tr><td class="searchPara"><asp:Label ID="lblPrescriptionID" runat="server" Text="Prescription ID:"></asp:Label> <asp:TextBox ID="txtPrescriptionID" runat="server" ToolTip="Enter Prescription ID"></asp:TextBox></td> 
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                ControlToValidate="txtPrescriptionID" ErrorMessage="Prescription ID's are only numbers" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+        <tr><td class="searchPara"><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ToolTip="Press to Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" /></td><td class="searchPara"></td></tr>
         <tr>
             <td colspan="2">
                     <asp:GridView ID="grdStudents" AutoGenerateColumns="False" CssClass="GridView" runat="server" Width="100%" AllowPaging="True">
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
-                            <asp:BoundField DataField="Prescription_ID" HeaderText="Prescription ID" SortExpression="Prescription_ID" />
-                            <asp:BoundField DataField="Medication_Name" HeaderText="Medication Name" SortExpression="Medication_Name" />
-                            <asp:BoundField HeaderText="Physician ID" DataField="Physician_ID" SortExpression="Physician_ID" />
-                            <asp:BoundField HeaderText="Patient ID" DataField="Patient_ID" SortExpression="Patient_ID" />
+                            <asp:BoundField DataField="Prescription_ID" HeaderText="Prescription ID"  />
+                            <asp:BoundField DataField="Medication_Name" HeaderText="Medication Name"  />
+                            <asp:BoundField HeaderText="Physician ID" DataField="Physician_ID"  />
+                            <asp:BoundField HeaderText="Patient ID" DataField="Patient_ID"  />
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!
