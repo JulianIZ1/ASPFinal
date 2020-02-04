@@ -66,9 +66,6 @@ namespace ASPFinal
 
             try
             {
-
-               
-
                 recordToBeEdited = e.CommandArgument.ToString().Trim();
 
                 StringBuilder sb = new StringBuilder();

@@ -21,8 +21,6 @@ namespace ASPFinal
                     DataSet dataSet = new DataSet();
                     string phyid = Request.QueryString["ID"];
                     dataSet = dataTier.FindByID(phyid);
-
-
                     if (Request.QueryString["ID"].Trim().ToUpper() == "EDIT")
                     {
 
@@ -39,7 +37,7 @@ namespace ASPFinal
                         txtStreet.Text = dataSet.Tables[0].Rows[0]["streetname"].ToString();
                         txtCity.Text = dataSet.Tables[0].Rows[0]["city"].ToString();
                         ddlState.Text = dataSet.Tables[0].Rows[0]["doc_state"].ToString();
-
+                        // Binds state to the dropdown list
                         ddlState.DataSource = StateManager.getStates();
                         ddlState.DataTextField = "FullAndAbbrev";
                         ddlState.DataValueField = "abbreviation";
@@ -60,7 +58,7 @@ namespace ASPFinal
 
         protected void btnClose_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ViewPhysicians.aspx");
+            this.ClientScript.RegisterClientScriptBlock(this.GetType(), "Close", "window.close()", true);
         }
 
         protected void btnHidden_Click(object sender, EventArgs e)

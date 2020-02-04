@@ -15,7 +15,7 @@
             }
             return isValid;
         }
-    </script>
+        </script>
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
     <div class="navbar verticalCenter" align="right" style="background-color:black">

@@ -157,7 +157,7 @@
             <td>
                 <asp:TextBox ID="txtSpecialty" style="width:90%;" runat="server" ToolTip="Enter Specialty"></asp:TextBox>
                 <br />
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtSpeciality"></asp:RequiredFieldValidator>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Do not leave blank" ControlToValidate="txtSpecialty"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

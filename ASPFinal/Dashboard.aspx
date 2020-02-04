@@ -55,10 +55,8 @@
                         <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="Go To First Page" LastPageText="Go To Last Page" Position="Top"  />
                         <Columns>
                             <asp:BoundField DataField="FNAME" HeaderText="First Name"  />
-                            <asp:BoundField DataField="MIDINIT" HeaderText="Middle Initial"  />
                             <asp:BoundField DataField="LNAME" HeaderText="Last Name"  />
-                            <asp:BoundField HeaderText="Position" DataField="Position"  />
-                            <asp:BoundField HeaderText="Specialty" DataField="Specialty"  />                          
+                            <asp:BoundField HeaderText="Speciality" DataField="Speciality"  />                          
                         </Columns>   
                         <EmptyDataTemplate>
                             No Records Found Matching Your Search!

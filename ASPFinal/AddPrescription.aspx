@@ -39,8 +39,8 @@
                 <asp:TextBox ID="txtRefillAmount" style="width:80%;" runat="server" ToolTip="Enter Refill Amount"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblRefillAmt" runat="server" Text=""></asp:Label>
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtRefillAmount" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtRefillAmount" runat="server" ErrorMessage="Refills are numbers only"
+                   ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -57,8 +57,8 @@
                 <asp:TextBox ID="txtDosage" style="width:80%;" runat="server" ToolTip="Enter Dosage"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblDosage" runat="server" Text=""></asp:Label>
-                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtDosage" runat="server" ErrorMessage="Names only contain letters"
-                   ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtDosage" runat="server" ErrorMessage="Dosage is a number"
+                ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
 
             </td>
         </tr>
@@ -86,23 +86,18 @@
         <tr>
             <td class="auto-style2">*Patient ID:</td>
             <td>
-                <asp:TextBox ID="txtPatID" runat="server" ToolTip="Enter Patient ID"></asp:TextBox>
+                <asp:DropDownList ID="ddlPatientID" runat="server" />
                 <br />               
                 <asp:Label ID="lblPatID" runat="server" Text=""></asp:Label>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Patient ID is required." Text="Patient ID is required." ControlToValidate="txtPatID" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-              
             </td>
         </tr>
         <tr>
             <td class="auto-style2">*Physician ID:</td>
             <td>
-                <asp:TextBox ID="txtPhysID" runat="server" ToolTip="Enter Physician ID"></asp:TextBox>
+                <asp:DropDownList ID="ddlPhysID" runat="server" />
                 <br />
                 <asp:Label ID="lblPhyID" runat="server" ToolTip="Enter Physician ID"></asp:Label> 
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="A Physician ID is required." Text=" Physician ID is required." ControlToValidate="txtPhysID" EnableClientScript="false" ValidationGroup="firstGroup"></asp:RequiredFieldValidator>
-              
             </td>
-            
         </tr>
         <tr>
             <td>

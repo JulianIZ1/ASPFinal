@@ -108,5 +108,5 @@ create table prescription(
 )
 
 -- Inserts a value into the prescription table
-insert into prescription(rx_number, medication_name, refill_amt, refill_date, dosage, frequency, intake_method, patient_id, physician_id)
-values('302', 'Penicillin', '20', '2/27/2020', '050', 'Orally', 'Take once daily', 1, 1)
+insert into prescription(rx_number, medication_name, refill_amt, refill_date, dosage, intake_method, frequency, patient_id, physician_id)
+values('305', 'Morphone', '12', '2/3/2020', '50', 'Insert into butt', 'Twice daily', 1, 1)
