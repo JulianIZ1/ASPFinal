@@ -119,6 +119,7 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="DashboardCSS.css" />
     <Content Include="Home.html" />
+    <Content Include="Login.aspx" />
     <Content Include="main.css" />
     <Content Include="MasterStyle.css" />
     <Content Include="MyScript.js" />
@@ -172,6 +173,7 @@
     <Compile Include="AddRefills.aspx.designer.cs">
       <DependentUpon>AddRefills.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataTiers\LoginDataTier.cs" />
     <Compile Include="DataTiers\PatientDataTier.cs" />
     <Compile Include="DataTiers\PhysicianDataTier.cs" />
     <Compile Include="Dashboard.aspx.cs">
@@ -182,6 +184,13 @@
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataTiers\PrescriptionDataTier.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
