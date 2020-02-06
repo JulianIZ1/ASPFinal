@@ -47,10 +47,12 @@ function SelectAll(id)
     <br />
     <br />
     <table class="auto-style1">
-        <tr><td class="searchPara"><asp:Label ID="lblPhysicianID" runat="server" Text="Physician ID:"></asp:Label><asp:TextBox ID="txtPhysicianID" runat="server" ToolTip="Enter Physician ID"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label><asp:TextBox ID="txtFName" runat="server" ToolTip="Enter First Name Here"></asp:TextBox></td>
+        <tr><td class="searchPara"><asp:Label ID="lblPhysicianID" runat="server" Text="Physician ID:"></asp:Label><asp:TextBox ID="txtPhysicianID" runat="server" ToolTip="Enter Physician ID"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="PLease use only numbers" ControlToValidate="txtPhysicianID" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+            </td>
+            <td class="searchPara">&nbsp;</td>
             
-            <td class="searchPara"><asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label><asp:TextBox ID="txtLName" runat="server" ToolTip="Enter Last Name Here"></asp:TextBox></td>
+            <td class="searchPara">&nbsp;</td>
             
 
         <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ToolTip="Press to Search" /><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" /></td></tr>
@@ -81,11 +83,5 @@ function SelectAll(id)
         .auto-style1 {
             height: 28px;
         }
-        .auto-style2 {
-            width: 5%;
-            height: 1%;
-            text-align: right;
-            color: white;
-        }
-    </style>
+        </style>
 </asp:Content>

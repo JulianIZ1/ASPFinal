@@ -18,15 +18,7 @@
     </script>
     <link href="main.css" rel="stylesheet" />
     <link href="StyleSheet.css" rel="stylesheet" />
-    <div class="navbar verticalCenter" align="right" style="background-color:black">
-            <img src="Images/logo2.jpg" class="logo"/>
-            <a href="Dashboard.aspx">Dashboard</a>
-            <a href="ViewPrescriptions.aspx">Prescriptions</a>
-            <a href="" class="active">Doctors</a>
-            <a href="ViewPatients.aspx">Patients</a>
-            <a href="Home.html">Logout</a>
-
-        </div>
+ 
     <table class="auto-style1" style="color:white; background-color:black">
         <tr>
             <td class="auto-style2">Physician ID:</td>

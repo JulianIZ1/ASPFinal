@@ -89,7 +89,7 @@ namespace ASPFinal
                 StringBuilder sb = new StringBuilder();
                 sb.Append("<script language='JavaScript'>");
                 sb.Append("window.open('UpdatePatient.aspx?ID=" + recordToBeEdited + "' , 'UpdatePatient',");
-                sb.Append("'width=525, height=525, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
+                sb.Append("'width=1000, height=1000, menubar=no, resizeable=yes, left=50, right=50, scrollbars=yes');");
                 sb.Append("</script");
 
                 // Register script

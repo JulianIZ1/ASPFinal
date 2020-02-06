@@ -44,16 +44,15 @@ function SelectAll(id)
         </div>
     
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <ajaxToolkit:AutoCompleteExtender ID="aceFname" runat="server" ServiceMethod="GetCompletionFname" TargetControlID="txtFname" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
-    <ajaxToolkit:AutoCompleteExtender ID="aceLname" runat="server" ServiceMethod="GetCompletionLname" TargetControlID="txtLname" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
     <ajaxToolkit:AutoCompleteExtender ID="acePatientID" runat="server" ServiceMethod="GetCompletionPatientID" TargetControlID="txtPatientID" UseContextKey="True" CompletionInterval="1" EnableCaching="true" CompletionSetCount="12" MinimumPrefixLength="1" DelimiterCharacters=";, :"></ajaxToolkit:AutoCompleteExtender>
 
 
     <table class="auto-style1">
         <tr><td class="searchPara"><asp:Label ID="lblPatientID" runat="server" Text="Patient ID:"></asp:Label><asp:TextBox ID="txtPatientID" runat="server" ToolTip="Enter Patient ID"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="PLease use only numbers" ControlToValidate="txtPatientID" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
             </td>
-            <td class="searchPara"><asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label><asp:TextBox ID="txtFName" runat="server" font-size="Medium" ToolTip="Enter First Name Here"></asp:TextBox></td>
-            <td class="searchPara"><asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label><asp:TextBox ID="txtLName" runat="server" ToolTip="Enter Last Name Here"></asp:TextBox></td>
+            <td class="searchPara">&nbsp;</td>
+            <td class="searchPara"></td>
         </tr>        
         <tr><td><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ToolTip="Press to Search"/><asp:Button ID="btnClose" runat="server" Text="Close" OnClick="btnClose_Click" ToolTip="Press to Close" /></td></tr>
         <tr>
@@ -93,11 +92,5 @@ function SelectAll(id)
         .auto-style1 {
             height: 28px;
         }
-        .auto-style2 {
-            width: 5%;
-            height: 1%;
-            text-align: right;
-            color: white;
-        }
-    </style>
+        </style>
 </asp:Content>

@@ -66,7 +66,7 @@ namespace ASPFinal
             }
         }
 
-        public DataSet getphysician(string phyid, string fname,  string lname)
+        public DataSet getphysician(string phyid)
         {
             try
             {
@@ -79,8 +79,6 @@ namespace ASPFinal
                 cmdString.CommandText = "find_physician";  //name of stored procedure
                 //Define input parameter
                 cmdString.Parameters.Add("@physician_id", SqlDbType.Int).Value = phyid;    //parameter names must match and in same
-                cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname;
-                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;

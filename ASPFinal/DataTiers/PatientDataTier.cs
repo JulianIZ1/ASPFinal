@@ -64,7 +64,7 @@ namespace ASPFinal
         }
 
         // Serach the paitent
-        public DataSet GetPatient(string patid, string fname, string lname)
+        public DataSet GetPatient(string patid)
         {
             try
             {
@@ -77,8 +77,6 @@ namespace ASPFinal
 
                 // Defines the input parameters
                 cmdString.Parameters.Add("@patient_id", SqlDbType.VarChar, 25).Value = patid;
-                cmdString.Parameters.Add("@fname", SqlDbType.VarChar, 50).Value = fname;
-                cmdString.Parameters.Add("@lname", SqlDbType.VarChar, 50).Value = lname;
                 //adapter and dataset
                 SqlDataAdapter aAdapter = new SqlDataAdapter();
                 aAdapter.SelectCommand = cmdString;

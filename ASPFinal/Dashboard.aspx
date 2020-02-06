@@ -31,7 +31,7 @@
             <table class="customerInfoTable">
             <tr>
                 <td colspan="2">
-                                    <p>Many patients experince death like behaviors, do not take with food or water.</p>
+                                    <p>Many patients experience death like behaviors, do not take with food or water.</p>
                                     <p>Do not breath water, you are not a fish.</p>
                                     <p>May cause large growth of brain</p>
                 </td>

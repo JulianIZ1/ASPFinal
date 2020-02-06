@@ -30,7 +30,7 @@ namespace ASPFinal
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if ((txtPhysicianID.Text.Trim() != "") || (txtFName.Text.Trim() != "") || (txtLName.Text.Trim() != "") )
+            if ((txtPhysicianID.Text.Trim() != ""))
             {
                 try
                 {
@@ -48,15 +48,9 @@ namespace ASPFinal
         {
             PhysicianDataTier aDatatier = new PhysicianDataTier();
             ViewState["vphyid"] = txtPhysicianID.Text.Trim();
-            ViewState["vflame"] = txtFName.Text.Trim();
-
-            ViewState["vlname"] = txtLName.Text.Trim();
-
-
 
             DataSet aDataSet = new DataSet();
-            aDataSet = aDatatier.getphysician(Convert.ToString(ViewState["vphyid"]),
-                Convert.ToString(ViewState["vflame"]),Convert.ToString(ViewState["vlname"]));
+            aDataSet = aDatatier.getphysician(Convert.ToString(ViewState["vphyid"]));
 
             grdPhysician.DataSource = aDataSet.Tables[0];
 
